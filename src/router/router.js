@@ -1,0 +1,5 @@
+const route=[
+    {
+        path:'/'
+    },
+]
