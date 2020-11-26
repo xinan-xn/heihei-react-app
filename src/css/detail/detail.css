@@ -1,0 +1,337 @@
+
+.warp{
+    width: 10rem;
+    height: auto;
+}
+/* 首页 */
+.header {
+    height: 1.2rem;
+    background: #323436;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.menu {
+    position: absolute;
+    width: 0.53333333rem;
+    height: 0.46666667rem;
+    left: 0.26666667rem;
+    top: 0.37333333rem;
+}
+
+.menu span {
+    text-indent: -999px;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../../images/icon_menu.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.logo {
+    width: 4.306667rem;
+    height: 0.893333rem;
+    margin: 0 auto;
+    padding: 0.30666667rem 0.93333333rem 0;
+    background: url("../../images/logo.png") no-repeat;
+    background-origin: content-box;
+    background-size: 100% 100%;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+.user {
+    width: 0.66666667rem;
+    height: 0.70666667rem;
+    position: absolute;
+    top: 0.22666667rem;
+    right: 0.26666667rem;
+    background: url("../../images/icon_user.png") no-repeat;
+    background-size: 100% auto;
+}
+/* 主体内容 */
+.main{
+    width: 10rem;
+    height: auto;
+    background: #dfe2e4;
+}
+
+/* 轮播图 */
+.banner{
+    width: 10rem;
+    height: 6.133333rem;
+    background: red;
+}
+
+.main_box{
+    width: 10rem;
+    height: auto;
+}
+/* 学员作品 */
+.works{
+    width: 9.466667rem;
+    height: 116rem;
+    margin: 0.266667rem auto;
+    background: #ffffff;
+}
+.works h3{
+    width: 9.2rem;
+    height: 2.12rem;
+    font-family: fzlt;
+    padding-top: 0.42666667rem;
+    padding-bottom: 0.46666667rem;
+    font-size: 0.53333333rem;
+    line-height: 0.61333333rem;
+    white-space: pre-line;
+    margin: 0 auto;
+}
+/* 主要内容 */
+.works_box{
+    width: 9.2rem;
+    height: auto;
+    margin: 0.133333rem auto;
+}
+/* 12张图片 */
+.works_img{
+    width: 9.2rem;
+    height: 11.973333rem;
+    background: url("../../images/1.jpg") no-repeat;
+    background-size: 100% auto;
+}
+/* 前言 */
+.works_text{
+    width: 9.2rem;
+    height: 6.933333rem;
+    margin-top: 0.333333rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+}
+.works_text span{
+    width: 0.973333rem;
+    height: 0.32rem;
+}
+/* 画廊幻灯片 */
+.works_slide{
+    width: 9.2rem;
+    height: 0.533333rem;
+    margin: 0.32rem 0 0.4rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+}
+.works_slide span{
+    width: 1.693333rem;
+    height: 0.32rem;
+    color: #D75757;
+}
+/* 三张图片 */
+.works_imgone{
+    width: 9.2rem;
+    height: 5.333333rem;
+    background: url("../../images/2.jpg") no-repeat;
+    background-size: 100% auto;
+}
+.works_imgtwo{
+    width: 9.2rem;
+    height: 5.333333rem;
+    background: url("../../images/3.jpg") no-repeat;
+    background-size: 100% auto;
+}
+.works_imgthree{
+    width: 9.2rem;
+    height: 5.333333rem;
+    background: url("../../images/4.jpg") no-repeat;
+    background-size: 100% auto;
+}
+/* 说明一号 */
+.works_show{
+    width: 9.2rem;
+    height: 0.533333rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+}
+.works_showa{
+    width: 9.2rem;
+    height: 0.533333rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+}
+.works_showb{
+    width: 9.2rem;
+    height: 3.2rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+}
+.works_showc{
+    width: 9.2rem;
+    height: 0.533333rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+}
+.works_showd{
+    width: 9.2rem;
+    height: 4.266667rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+}
+.works_showe{
+    width: 9.2rem;
+    height: 0.533333rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+}
+/* 烟花效果 */
+.works_fire{
+    width: 9.2rem;
+    height: 0.533333rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+}
+.works_fireone{
+    width: 9.2rem;
+    height: 5.333333rem;
+    background: url("../../images/5.jpg") no-repeat;
+    background-size: 100% auto;
+}
+.works_firetwo{
+    width: 9.2rem;
+    height: 5.333333rem;
+    background: url("../../images/6.jpg") no-repeat;
+    background-size: 100% auto;
+}
+/* 说明二号 */
+.works_explain{
+    width: 9.2rem;
+    height: 0.533333rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+}
+.works_explaina{
+    width: 9.2rem;
+    height: 5.333333rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+}
+/* 时光唱片机 */
+.works_time{
+    width: 9.2rem;
+    height: 0.533333rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+}
+.works_timeone{
+    width: 9.2rem;
+    height: 5.333333rem;
+    background: url("../../images/7.jpg") no-repeat;
+    background-size: 100% auto;
+}
+.works_timetwo{
+    width: 9.2rem;
+    height: 5.333333rem;
+    background: url("../../images/8.jpg") no-repeat;
+    background-size: 100% auto;
+}
+/* 说明三号 */
+.works_showone{
+    width: 9.2rem;
+    height: 0.533333rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+}
+.works_showtwo{
+    width: 9.2rem;
+    height: 10.666667rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+}
+/* 小游戏集合 */
+.works_games{
+    width: 9.2rem;
+    height: 0.533333rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+}
+.works_gamesimg{
+    width: 8.866667rem;
+    height: 12.333333rem;
+    background: url("../../images/9.jpg") no-repeat;
+    background-size: 100% auto;
+}
+/* 说明四号 */
+.works_gamesone{
+    width: 9.2rem;
+    height: 0.533333rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+    margin-top: 0.266667rem;
+}
+.works_gamestwo{
+    width: 9.2rem;
+    height: 2.133333rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+}
+.works_gamesthree{
+    width: 9.2rem;
+    height: 4.266667rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+}
+/* 后记 */
+.works_before{
+    width: 9.2rem;
+    height: 0.533333rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+}
+.works_beforeone{
+    width: 9.2rem;
+    height: 5.333333rem;
+    font: 0.32rem/0.53333333rem "宋体" !important;
+    word-break: break-all !important;
+    color: #312f2f !important;
+}
+
+
+
+/* 点赞，留言 */
+.comment{
+    width: 9.466667rem;
+    height: 21.493333rem;
+    margin: 0.133333rem auto;
+    background: #ffffff;
+}
+/* 尾部 */
+.footer{
+    position: fixed;
+    width: 100%;
+    height: 1.146667rem;
+    background: #E64D6B;
+    bottom: 0;
+}
+.footer p{
+    font-size: 0.4rem;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0.4rem;
+}
