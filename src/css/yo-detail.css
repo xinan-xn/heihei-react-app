@@ -1,71 +1,10 @@
 
-.warp{
-    width: 10rem;
-    height: auto;
-}
-/* 首页 */
-.header {
-    height: 1.2rem;
-    background: #323436;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-
-.menu {
-    position: absolute;
-    width: 0.53333333rem;
-    height: 0.46666667rem;
-    left: 0.26666667rem;
-    top: 0.37333333rem;
-}
-
-.menu span {
-    text-indent: -999px;
-    overflow: hidden;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: url("../../images/icon_menu.png") no-repeat;
-    background-size: 100% 100%;
-}
-
-.logo {
-    width: 4.306667rem;
-    height: 0.893333rem;
-    margin: 0 auto;
-    padding: 0.30666667rem 0.93333333rem 0;
-    background: url("../../images/logo.png") no-repeat;
-    background-origin: content-box;
-    background-size: 100% 100%;
-    text-indent: -999px;
-    overflow: hidden;
-}
-
-.user {
-    width: 0.66666667rem;
-    height: 0.70666667rem;
-    position: absolute;
-    top: 0.22666667rem;
-    right: 0.26666667rem;
-    background: url("../../images/icon_user.png") no-repeat;
-    background-size: 100% auto;
-}
 /* 主体内容 */
-.main{
+.warp{
     width: 10rem;
     height: auto;
     background: #dfe2e4;
 }
-
-/* 轮播图 */
-.banner{
-    width: 10rem;
-    height: 6.133333rem;
-    background: red;
-}
-
 .main_box{
     width: 10rem;
     height: auto;
@@ -98,7 +37,7 @@
 .works_img{
     width: 9.2rem;
     height: 11.973333rem;
-    background: url("../../images/1.jpg") no-repeat;
+    background: url("../images/1.jpg") no-repeat;
     background-size: 100% auto;
 }
 /* 前言 */
@@ -131,19 +70,19 @@
 .works_imgone{
     width: 9.2rem;
     height: 5.333333rem;
-    background: url("../../images/2.jpg") no-repeat;
+    background: url("../images/2.jpg") no-repeat;
     background-size: 100% auto;
 }
 .works_imgtwo{
     width: 9.2rem;
     height: 5.333333rem;
-    background: url("../../images/3.jpg") no-repeat;
+    background: url("../images/3.jpg") no-repeat;
     background-size: 100% auto;
 }
 .works_imgthree{
     width: 9.2rem;
     height: 5.333333rem;
-    background: url("../../images/4.jpg") no-repeat;
+    background: url("../images/4.jpg") no-repeat;
     background-size: 100% auto;
 }
 /* 说明一号 */
@@ -200,13 +139,13 @@
 .works_fireone{
     width: 9.2rem;
     height: 5.333333rem;
-    background: url("../../images/5.jpg") no-repeat;
+    background: url("../images/5.jpg") no-repeat;
     background-size: 100% auto;
 }
 .works_firetwo{
     width: 9.2rem;
     height: 5.333333rem;
-    background: url("../../images/6.jpg") no-repeat;
+    background: url("../images/6.jpg") no-repeat;
     background-size: 100% auto;
 }
 /* 说明二号 */
@@ -235,13 +174,13 @@
 .works_timeone{
     width: 9.2rem;
     height: 5.333333rem;
-    background: url("../../images/7.jpg") no-repeat;
+    background: url("../images/7.jpg") no-repeat;
     background-size: 100% auto;
 }
 .works_timetwo{
     width: 9.2rem;
     height: 5.333333rem;
-    background: url("../../images/8.jpg") no-repeat;
+    background: url("../images/8.jpg") no-repeat;
     background-size: 100% auto;
 }
 /* 说明三号 */
@@ -270,7 +209,7 @@
 .works_gamesimg{
     width: 8.866667rem;
     height: 12.333333rem;
-    background: url("../../images/9.jpg") no-repeat;
+    background: url("../images/9.jpg") no-repeat;
     background-size: 100% auto;
 }
 /* 说明四号 */

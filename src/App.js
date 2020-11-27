@@ -4,7 +4,7 @@ import Header from './view/xuenan/index'
 
 import Login from './view/login/login'
 
-// import Detail from './view/yango/detail'
+import Detail from './view/yango/detail'
 // import Head from './view/xuenan/head'
 import Nav from './view/xuenan/nav'
 // import Banner from './component/Banner'
@@ -45,7 +45,7 @@ function App() {
       }>
         {/* <Banner ></Banner> */}
         <Route path="/" exact component={Home}></Route>
-        <Route path="/course" exact component={Login}></Route>
+        <Route path="/course" exact component={Detail}></Route>
       </div>
 
 
