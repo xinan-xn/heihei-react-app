@@ -5,6 +5,7 @@
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 9999;
 }
 
 .menu {
@@ -26,8 +27,8 @@
 }
 
 .logo {
-    width: 2.44rem;
-    height: 1.2rem;
+    width: 4.306667rem;
+    height: 0.893333rem;
     margin: 0 auto;
     padding: 0.30666667rem 0.93333333rem 0;
     background: url("../images/logo.png") no-repeat;

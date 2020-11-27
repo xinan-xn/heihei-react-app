@@ -1,0 +1,28 @@
+#menu {
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 1.2rem .5rem;
+    width: 4.5rem;
+    height: 100vh;
+    background: url("../images/menu.png") no-repeat;
+    background-size: cover;
+    z-index: -999;
+    /* display: none; */
+  }
+  #menu a {
+    display: block;
+    font: .3rem/.9rem "宋体";
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    color: rgba(255, 255, 255, .8);
+  }
+  #menu a:before {
+    font-size: .4rem;
+    margin: 0 .1rem;
+    /* color: rgba(255, 255, 255, .6); */
+    vertical-align: middle;
+  }
+  #menu a:first-child {
+    border-top: 1px solid rgba(255, 255, 255, .3);
+  }
