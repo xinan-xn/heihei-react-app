@@ -8,7 +8,7 @@ import Login from './view/login/login'
 // import Head from './view/xuenan/head'
 import Nav from './view/xuenan/nav'
 // import Banner from './component/Banner'
-// import { Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import axio from './http'
 
 import Home from "../src/view/dyc/home"
@@ -28,15 +28,15 @@ function App() {
   return (
     <div className="App">
 
-      <Login></Login>
+      {/* <Login></Login> */}
 
       {/* <Detail></Detail> */}
       {/* <Header></Header> */}
       <Header setFlag={setFlag} flag={flag}></Header>
-      {/* <Head></Head> */}
       {
         flag ? <Nav></Nav> : ""
       }
+      {/* <Nav></Nav> */}
 
       <div style={
         {
@@ -44,11 +44,10 @@ function App() {
         }
       }>
         {/* <Banner ></Banner> */}
-        <Home></Home>
+        <Route path="/" exact component={Home}></Route>
+        <Route path="/course" exact component={Login}></Route>
       </div>
-      {/* <Route path="/" exact component={首页}></Route>
-      <Route path="/course" exact component={课程表}></Route>
-      <Route path="/lecturer" exact component={讲师}></Route> */}
+
 
     </div>
 
