@@ -7,7 +7,7 @@
 
 body {
     /* 设计稿是750px  js划分了10等份 75px==1rem*/
-    width: 10rem;
+    /* width: 10rem; */
     min-width: 320px;
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
