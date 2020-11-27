@@ -8,8 +8,7 @@
     height: 100vh;
     background: url("../images/menu.png") no-repeat;
     background-size: cover;
-    z-index: -999;
-    /* display: none; */
+    z-index: 100;
   }
   #menu a {
     display: block;
