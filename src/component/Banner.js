@@ -24,12 +24,7 @@ const transfrom={
 const arr = [imgUrl, imgUrl1, imgUrl2, imgUrl3]
 function Banner() {
     return (
-        <div style={{
-            width:'10rem',
-            height:'400px',
-            background:"red"
-            
-        }}>
+        <div>
         <Carousel autoplay>{
             arr.map((item, index) => {
                 return (
