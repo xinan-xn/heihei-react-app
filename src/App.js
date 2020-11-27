@@ -9,6 +9,7 @@ import Nav from './view/xuenan/nav'
 import axio from './http'
 
 import Home from "../src/view/dyc/home"
+
 axio().then((res) => {
   console.log(res)
 })
