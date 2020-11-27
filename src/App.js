@@ -9,12 +9,9 @@ import Detail from './view/yango/detail'
 import Nav from './view/xuenan/nav'
 // import Banner from './component/Banner'
 import { Route } from 'react-router-dom'
-import axio from './http'
 
 import Home from "../src/view/dyc/home"
-axio().then((res) => {
-  console.log(res)
-})
+
 // const transfrom={
 //   position:'relative',
 //   transform: 'translateX(4.5rem)'
