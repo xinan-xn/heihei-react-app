@@ -1,3 +1,4 @@
+
 li,ol{
     list-style: none;
 }
@@ -5,11 +6,12 @@ a{
     text-decoration: none;
 }
 #home_main{
-    margin-top: 1.2rem;
+width: 10rem;
+    margin: 1.2rem auto 0;
     background: #f3fafd;
 }
 
-
+/* 报名注册 */
 .content_list{
     width: 10rem;
     padding: 0.133333rem 0.04rem 0.093333rem;
@@ -53,7 +55,7 @@ a{
     width: 2.133333rem;
     height: 2.133333rem;
     background-color: #fdf4f9;
-    margin: 0.173333rem 95px 0;
+    margin: 0.173333rem 1.266667rem 0;
     border-radius: 50%;
     text-align: center;
     line-height: 2.133333rem;
@@ -63,17 +65,16 @@ a{
 .txt{
     width: 4.6024rem;
     height: 2.56rem;
-    padding: 0.746667rem 30px 0;
+    padding: 0.746667rem 0.4rem 0;
     margin: 0 auto;
 }
 .txt p{
     font-size: 0.32rem;
 }
-.content_list a{
+.content_list  a{
     display: block;
     width: 2.76rem;
     height: 0.96rem;
-    background-color: red;
     padding: 0 0.093333rem 0.16rem 0;
     margin: 0 auto;
     background: url("../images/btn_bg.png") no-repeat;
@@ -84,6 +85,7 @@ a{
     line-height: 0.96rem;
     font-weight: bold;
 }
+/* VIP会员 */
 .register_vip{
     text-align: center;
     padding: 0.04rem 0.13333333rem 0.41333333rem;
@@ -121,6 +123,7 @@ a{
     line-height: 1.093333rem;
     font-weight: bold;
 }
+/* 妙味特色 */
 .characteristic{
     background-color: #a5d677;
 }
@@ -145,7 +148,7 @@ a{
 }
 .characteristic_list li a{
     display: block;
-    width: 140px;
+    width: 1.866667rem;
     height: 1.866667rem;
     background-color: #fff;
     background-image: url("../images/icon1.png");
@@ -162,6 +165,7 @@ a{
     font-size: 0.373333rem;
     line-height: 0.466667rem;
 }
+/* 学员作品 */
 .works{
     width: 10rem ;
     padding: 0.2rem 0 0;
@@ -175,19 +179,19 @@ a{
 .works .works_cont ul{
     display: flex;
     flex-wrap: wrap;
-    padding: 0 20px;
+    padding: 0 0.266667rem;
 }
 .works .works_cont li{
     width: 4.733333rem;
     height: 4.733333rem;
-    background: url("../images/work1.jpg");
+    background: url("../images/work1.jpg") no-repeat;
+    background-size: 100% 100%;
 }
 .works .works_cont li .works_tit{
     display: block;
     width: 4.733333rem;
     height: 1.226667rem;
     padding: 0.493333rem 0 0;
-    /* background-color: rgba(54, 53, 53, 0.3); */
     background: linear-gradient(to top,rgba(83, 83, 83,0.7),rgba(83, 83, 83,0.5),rgba(83, 83, 83,0.3),rgba(83, 83, 83,0));
     margin: 3.506667rem 0 0;
 }
@@ -218,7 +222,8 @@ a{
     width: 0.32rem;
     height: 0.32rem;
     margin: 0.146667rem 0.12rem 0 0;
-    background: url("../images/chat.png");
+    background: url("../images/chat.png") no-repeat;
+    background-size: 100% 100%;
 }
 .works_tit span em font{
     display: block;
@@ -226,5 +231,10 @@ a{
     color: #fff;
     font-size: 0.32rem;
     font-style: normal;
+}
+.title{
+    text-align: center;
+    margin: 0.133333rem 0;
+    font-size: 0.32rem;
 }
 
