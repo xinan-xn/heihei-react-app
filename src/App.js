@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import './css/one.css'
 import Header from './view/xuenan/index'
-import Detail from './view/详情/detail'
+// import Detail from './view/yango/detail'
 // import Head from './view/xuenan/head'
 import Nav from './view/xuenan/nav'
 import Banner from './component/Banner'
@@ -10,10 +10,10 @@ import axio from './http'
 axio().then((res) => {
   console.log(res)
 })
-const transfrom={
-  position:'relative',
-  transform: 'translateX(4.5rem)'
-}
+// const transfrom={
+//   position:'relative',
+//   transform: 'translateX(4.5rem)'
+// }
 function App() {
   const [flag,setFlag]=useState(false)
   useEffect(()=>{
@@ -21,7 +21,7 @@ function App() {
   },[flag])
   return (
     <div className="App">
-      <Detail></Detail>
+      {/* <Detail></Detail> */}
       <Header></Header>
       <Header setFlag={setFlag} flag={flag}></Header>
       {/* <Head></Head> */}
