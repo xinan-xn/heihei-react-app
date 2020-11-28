@@ -25,24 +25,18 @@ function App() {
   return (
     <div className="App">
 
-      {/* <Login></Login> */}
-
-      {/* <Detail></Detail> */}
-      {/* <Header></Header> */}
       <Header setFlag={setFlag} flag={flag}></Header>
       {
         flag ? <Nav></Nav> : ""
       }
-      {/* <Nav></Nav> */}
-
       <div style={
         {
           transform: `translateX(${flag ? 4.5 : 0}rem)`
         }
       }>
-        {/* <Banner ></Banner> */}
         <Route path="/" exact component={Home}></Route>
-        <Route path="/course" exact component={Detail}></Route>
+        <Route path="/course" exact component={Login}></Route>
+        <Route path="/detail" exact component={Detail}></Route>
       </div>
 
 
