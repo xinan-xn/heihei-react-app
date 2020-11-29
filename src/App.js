@@ -13,7 +13,6 @@ import Course from "./view/course/index"
 import Home from "../src/view/dyc/home"
 
 
-import Course from '../src/view/course/index'
 import Div from '../src/view/zhl/page'
 
 // const transfrom={

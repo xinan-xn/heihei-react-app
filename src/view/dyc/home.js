@@ -1,13 +1,34 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import "../../css/home.css"
 import Banner from "../../component/Banner"
-// import getData from "../../http"
 import Works from "./works"
 import Content from "./content"
 import Characterisitic from "./characteristic"
-// import {Link} from "react-router-dom"
+import { getList } from '../../server/api'
 
-function Home(){
+
+
+
+
+function Home() {
+    // useEffect(() => {
+    //     getList({
+    //         sort: 1,
+    //         category_id: 1,
+    //         recommend: 1
+    //     }).then((res) => {
+
+    //         console.log(res)
+    //     })
+    // })
+    useEffect(async () => {
+        let urllist = await getList({
+            sort: 1,
+            category_id: 1,
+            recommend: 1
+        })
+        console.log(urllist)
+    })
     return (
         <div id="home_main">
             {/* 轮播图 */}

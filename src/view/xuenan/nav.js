@@ -6,7 +6,7 @@ function Nav() {
         <nav id="menu">
             <Link className="iconfont icon-home" to="/">首页</Link>
             <Link className="iconfont icon-kecheng" to="/course">课程安排</Link>
-            <Link className="iconfont icon-peixunjiangshi" to="/page">讲师团队</Link>
+            <Link className="iconfont icon-peixunjiangshi" to="/lecturer">讲师团队</Link>
         </nav>
     );
 }

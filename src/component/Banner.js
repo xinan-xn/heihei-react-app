@@ -18,25 +18,28 @@ const imgstyle = {
     height: '100%',
     width: '100%'
 }
-const transfrom={
-    transform: 'translateX(4.5rem)'
-}
-const arr = [imgUrl, imgUrl1, imgUrl2, imgUrl3]
+const arr = [
+    { id: 1, 'url': imgUrl },
+    { id: 2, 'url': imgUrl1 },
+    { id: 3, 'url': imgUrl2 },
+    { id: 4, 'url': imgUrl3 },
+
+]
 function Banner() {
     return (
         <div>
-        <Carousel autoplay>{
-            arr.map((item, index) => {
-                return (
-                    <div>
-                        <h3 style={contentStyle}>
-                            <img style={imgstyle} src={item}></img>
-                        </h3>
-                    </div>
-                )
-            })
-        }
-        </Carousel>
+            <Carousel autoplay>{
+                arr.map((item, index) => {
+                    return (
+                        <div>
+                            <h3 style={contentStyle} key={item.id}>
+                                <img style={imgstyle} src={item.url}></img>
+                            </h3>
+                        </div>
+                    )
+                })
+            }
+            </Carousel>
         </div>)
 }
 export default Banner
