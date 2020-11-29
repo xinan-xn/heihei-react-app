@@ -40,7 +40,7 @@ function App() {
 
       <div style={
         {
-          transform: `translateX(${flag ? 4.5 : 0}rem)`
+          // transform: `translateX(${flag ? 4.5 : 0}rem)`
         }
       }>
         {/* <Banner ></Banner> */}

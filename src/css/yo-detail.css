@@ -2,21 +2,18 @@
 /* 主体内容 */
 .warp{
     width: 10rem;
-    height: auto;
     background: #dfe2e4;
 }
-.main_box{
-    width: 10rem;
-    height: auto;
-}
+
 /* 学员作品 */
-.works{
+.main_works{
     width: 9.466667rem;
     height: 116rem;
     margin: 0.266667rem auto;
     background: #ffffff;
+    box-shadow: 0px 0px 0.13333333rem rgba(0, 0, 0, 0.16);
 }
-.works h3{
+.main_works h3{
     width: 9.2rem;
     height: 2.12rem;
     font-family: fzlt;
@@ -252,15 +249,13 @@
 }
 
 
-
-/* 点赞，留言 */
+/* 
 .comment{
     width: 9.466667rem;
     height: 21.493333rem;
     margin: 0.133333rem auto;
     background: #ffffff;
 }
-/* 尾部 */
 .footer{
     position: fixed;
     width: 100%;
@@ -273,4 +268,4 @@
     color: #ffffff;
     text-align: center;
     margin-top: 0.4rem;
-}
+} */
