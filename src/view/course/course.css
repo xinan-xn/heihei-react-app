@@ -1,0 +1,150 @@
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#pageWrap{
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 1.2rem 0 0;
+}
+.class_box{
+    width: 100%;
+    background: #3189ce url("../../images/class_bg.jpg") no-repeat 0 0 / 100% 100% ;
+    overflow: hidden;
+    padding: 0 0.26666667rem;
+}
+.class_box h2{
+    width: 3.78666667rem;
+    height: 1.01333333rem;
+    background: url("../../images/class_week.png") no-repeat 0 0 / 100% 100%;
+    margin: 0.66666667rem auto 0.82666667rem; 
+}
+.tabl{
+    width: 100%;
+    color: #3a3a3a;
+    font: 0.34666667rem "宋体";
+    border-collapse: separate;
+}
+.tabl thead{
+    background: rgba(206, 115, 175, 0.5);
+    color: #ffffff;
+}
+.tabl tbody{
+    background: #ffffff;
+}
+.tabl thead th{
+    line-height: 0.69333333rem;
+    text-align: center;
+}
+.tabl thead th:nth-of-type(1) {
+    width: 1.85333333rem;
+}
+.tabl thead th:nth-of-type(2) {
+    width: 2.61333333rem;
+}
+.tabl thead th:nth-of-type(3) {
+    width: 5.05333333rem;
+}
+.tabl .week1{
+    background: url("../../images/week1.png") no-repeat center / 0.94666667rem 0.37333333rem;
+    text-align: center;
+    text-indent: -999px;
+    overflow: hidden;
+    height: 1.54666667rem;
+}
+
+.tabl td{
+    border: solid 1px #cd73af;
+    line-height: 2;
+}
+tbody .center{
+    text-align: center;
+}
+.tabl .content_td{
+    text-indent: 0.76rem
+}
+.tabl .single td:nth-of-type(1) {
+    height: 0.88rem;
+    text-indent: -999px;
+    overflow: hidden;
+}
+.class_box p{
+    color: #ffffff;
+    text-align: center;
+    font: 0.34666667rem / 1.42666667rem fzlt;
+}
+.class_box p a{
+    background: #ffffff;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    display: inline-block;
+    width: 3.86666667rem;
+    color: #2f88cd;
+    font-size: 0.4rem;
+    line-height: 0.66666667rem;
+    vertical-align: top;
+    margin-top: 0.36rem;
+}
+#footer{
+    background: #323436;
+    padding-top: 0.06666667rem;
+    color: #fff;
+}
+.link {
+    font: 0.32rem / 1.10666667rem fzlt;
+    padding: 0 0.26666667rem;
+}
+#footer a{
+    color: #fff;
+    text-decoration: none;
+
+}
+.link a:nth-of-type(1) {
+    float: left;
+    padding-right: 0.42666667rem;
+    
+}
+.link a:nth-of-type(2) {
+    float: left;
+}
+.link a:nth-of-type(1)::before {
+    content: '';
+    width: 0.42666667rem;
+    height: 0.45333333rem;
+    display: inline-block;
+    background: url("../../images/teacher_phone.png") no-repeat 0 0 / 100% 100%;
+    vertical-align: top;
+    margin: 0.33333333rem 0.21333333rem 0 0.58666667rem;
+}
+.link a:nth-of-type(2)::before {
+    content: '';
+    width: 0.42666667rem;
+    height: 0.45333333rem;
+    display: inline-block;
+    background: url("../../images/teacher_email.png") no-repeat 0 0 / 100% 100%;
+    vertical-align: top;
+    margin: 0.33333333rem 0.21333333rem 0 0.58666667rem;
+}
+.foot_nav {
+    padding: 0 0.26666667rem 0.34666667rem;
+}
+.foot_nav a {
+    float: left;
+    width: 2.36rem;
+    font: 0.32rem / 0.62666667rem "微软雅黑";
+    text-align: center;
+    
+}
+.copyright{
+    text-align: center;
+    font: 0.29333333rem / 0.90666667rem "微软雅黑";
+    color: #868b8d;
+    height: 0.98666667rem;
+    background: #2d2f30;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
