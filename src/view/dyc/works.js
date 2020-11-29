@@ -4,73 +4,40 @@ import "../../css/home.css"
 // import { Link } from 'react-router-dom'
 function Works() {
     return (
-        <div className="works">
+        <div className="work">
             <p className="works_txt">学员作品</p>
             <div className="works_cont">
-                <ul>
-                    <li>
-                        <Link to="/detail">
-                            <span className="works_tit">
-                                <storing>时光唱片机</storing>
-                                <span>
-                                    <em>
-                                        <i></i>
-                                        <font>22</font>
-                                    </em>
-                                    <em>
-                                        <i></i>
-                                        <font>22</font>
-                                    </em>
-                                </span>
-                            </span>
-                        </Link>
-                    </li>
-                    <li>
-                        <span className="works_tit">
-                            <storing>时光唱片机</storing>
-                            <span>
-                                <em>
-                                    <i></i>
-                                    <font>22</font>
-                                </em>
-                                <em>
-                                    <i></i>
-                                    <font>22</font>
-                                </em>
-                            </span>
+                <Link to="/detail">
+                    <span className="works_tit">
+                        <storing>时光唱片机</storing>
+                        <span>
+                            <em>
+                                <i></i>
+                                <font>22</font>
+                            </em>
+                            <em>
+                                <i></i>
+                                <font>22</font>
+                            </em>
                         </span>
-                    </li>
-                    <li>
-                        <span className="works_tit">
-                            <storing>时光唱片机</storing>
-                            <span>
-                                <em>
-                                    <i></i>
-                                    <font>22</font>
-                                </em>
-                                <em>
-                                    <i></i>
-                                    <font>22</font>
-                                </em>
-                            </span>
+                    </span>
+                </Link>
+                <Link to="/detail">
+                    <span className="works_tit">
+                        <storing>时光唱片机</storing>
+                        <span>
+                            <em>
+                                <i></i>
+                                <font>22</font>
+                            </em>
+                            <em>
+                                <i></i>
+                                <font>22</font>
+                            </em>
                         </span>
-                    </li>
-                    <li>
-                        <span className="works_tit">
-                            <storing>时光唱片机</storing>
-                            <span>
-                                <em>
-                                    <i></i>
-                                    <font>22</font>
-                                </em>
-                                <em>
-                                    <i></i>
-                                    <font>22</font>
-                                </em>
-                            </span>
-                        </span>
-                    </li>
-                </ul>
+                    </span>
+                </Link>
+                
             </div>
         </div>
     )

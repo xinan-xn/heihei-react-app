@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../css/one.css'
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 function Header(props) {
     let {setFlag,flag} = props
     return (
@@ -14,7 +14,9 @@ function Header(props) {
                 }}>导航</span>
             </nav>
             <h1 className="logo">miaov.com</h1>
-            <span className="user" ></span>
+            <span className="user" >
+                <Link to="/login"></Link>
+            </span>
         </header>
     );
 }

@@ -1,3 +1,6 @@
+li{
+    list-style: none;
+}
 #home_main {
     width: 10rem;
     margin: 1.2rem auto 0;
@@ -183,36 +186,36 @@
 
 /* 学员作品 */
 
-.works {
+.work {
     width: 10rem;
     padding: 0.2rem 0 0;
+    /* height: 10rem; */
 }
 
-.works .works_txt {
+.work .works_txt {
     height: 1.346667rem;
     text-align: center;
     line-height: 1.346667rem;
     font-size: 0.533333rem;
 }
 
-.works .works_cont ul {
+.work .works_cont {
     display: flex;
     flex-wrap: wrap;
     padding: 0 0.266667rem;
 }
 
-.works .works_cont li {
+
+.work .works_cont a{
+    display: block;
     width: 4.733333rem;
     height: 4.733333rem;
     background: url("../images/work1.jpg") no-repeat;
     background-size: 100% 100%;
+    overflow: hidden;
 }
 
-.works .works_cont li>a{
-    display: block;
-}
-
-.works .works_cont li .works_tit {
+.work .works_cont a .works_tit {
     display: block;
     width: 4.733333rem;
     height: 1.226667rem;
@@ -221,7 +224,7 @@
     margin: 3.506667rem 0 0;
 }
 
-.works .works_cont li .works_tit storing {
+.work .works_cont a .works_tit storing {
     display: block;
     width: 2.093333rem;
     height: 0.733333rem;
@@ -232,7 +235,7 @@
     float: left;
 }
 
-.works .works_cont li .works_tit span {
+.work .works_cont a .works_tit span {
     display: block;
     width: 2.066667rem;
     height: 0.733333rem;
