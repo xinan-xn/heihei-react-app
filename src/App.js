@@ -9,7 +9,7 @@ import Detail from './view/yango/detail'
 import Nav from './view/xuenan/nav'
 // import Banner from './component/Banner'
 import { Route } from 'react-router-dom'
-
+import Course from "./view/course/index"
 import Home from "../src/view/dyc/home"
 
 // const transfrom={
@@ -35,8 +35,9 @@ function App() {
         }
       }>
         <Route path="/" exact component={Home}></Route>
-        <Route path="/course" exact component={Login}></Route>
+        <Route path="/course" exact component={Course}></Route>
         <Route path="/detail" exact component={Detail}></Route>
+        <Route path="/login" exact component={Login}></Route>
       </div>
 
 

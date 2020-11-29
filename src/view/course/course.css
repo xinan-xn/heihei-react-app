@@ -8,7 +8,7 @@
     width: 100%;
     overflow: hidden;
     padding: 0;
-    margin: 0;
+    margin: 1.2rem 0 0;
 }
 .class_box{
     width: 100%;
@@ -37,6 +37,7 @@
 }
 .tabl thead th{
     line-height: 0.69333333rem;
+    text-align: center;
 }
 .tabl thead th:nth-of-type(1) {
     width: 1.85333333rem;
