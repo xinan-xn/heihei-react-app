@@ -7,7 +7,7 @@
 #pageWrap{
     width: 100%;
     overflow: hidden;
-    padding: 0;
+    padding-top: 1.2rem;
     margin: 0;
 }
 .class_box{

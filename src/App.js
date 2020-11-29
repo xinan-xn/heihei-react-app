@@ -13,6 +13,9 @@ import axio from './http'
 
 import Home from "../src/view/dyc/home"
 
+import Course from '../src/view/course/index'
+import Div from '../src/view/zhl/page'
+
 axio().then((res) => {
   console.log(res)
 })
@@ -46,7 +49,8 @@ function App() {
       }>
         {/* <Banner ></Banner> */}
         <Route path="/" exact component={Home}></Route>
-        <Route path="/course" exact component={Detail}></Route>
+        <Route path="/course" exact component={Course}></Route>
+        <Route path="/lecturer" exact component={Div}></Route>
       </div>
 
 
