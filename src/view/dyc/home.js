@@ -1,7 +1,7 @@
 import React from "react"
 import "../../css/home.css"
 import Banner from "../../component/Banner"
-import getData from "../../http"
+// import getData from "../../http"
 import Works from "./works"
 import Content from "./content"
 import Characterisitic from "./characteristic"

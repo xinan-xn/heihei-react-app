@@ -47,3 +47,8 @@
     background: url("../images/icon_user.png") no-repeat;
     background-size: 100% auto;
 }
+.user a{
+    display: block;
+    width: 0.66666667rem;
+    height: 0.70666667rem;
+}

@@ -1,32 +1,30 @@
-
-li,ol{
+li{
     list-style: none;
 }
-a{
-    text-decoration: none;
-}
-#home_main{
-width: 10rem;
+#home_main {
+    width: 10rem;
     margin: 1.2rem auto 0;
     background: #f3fafd;
 }
 
 /* 报名注册 */
-.content_list{
+
+.content_list {
     width: 10rem;
     padding: 0.133333rem 0.04rem 0.093333rem;
     display: flex;
     flex-wrap: wrap;
-    
 }
-.content_list li{
+
+.content_list li {
     width: 4.693333rem;
     height: 8.24rem;
     background: url("../images/list1_bg.jpg") no-repeat;
     background-size: 100% 100%;
     margin: 0 0.133333rem 0.266667rem;
 }
-.content_list li button{
+
+.content_list li button {
     background: none;
     outline: none;
     width: 2.266667rem;
@@ -37,7 +35,8 @@ width: 10rem;
     color: #fff;
     border-radius: 0.133333rem;
 }
-.content_list .list_title{
+
+.content_list .list_title {
     width: 4.693333rem;
     height: 1.026667rem;
     margin: 0.173333rem 0 0;
@@ -46,12 +45,14 @@ width: 10rem;
     color: #fff;
     font-weight: 200;
 }
-.content_list .list_title span{
+
+.content_list .list_title span {
     display: block;
     font: 0.32rem fzlt;
     margin: 0.08rem 0;
 }
-.content_list .price{
+
+.content_list .price {
     width: 2.133333rem;
     height: 2.133333rem;
     background-color: #fdf4f9;
@@ -62,16 +63,19 @@ width: 10rem;
     font-size: 0.533333rem;
     color: #f18cc4;
 }
-.txt{
+
+.txt {
     width: 4.6024rem;
     height: 2.56rem;
     padding: 0.746667rem 0.4rem 0;
     margin: 0 auto;
 }
-.txt p{
+
+.txt p {
     font-size: 0.32rem;
 }
-.content_list  a{
+
+.content_list a {
     display: block;
     width: 2.76rem;
     height: 0.96rem;
@@ -85,32 +89,39 @@ width: 10rem;
     line-height: 0.96rem;
     font-weight: bold;
 }
+
 /* VIP会员 */
-.register_vip{
+
+.register_vip {
     text-align: center;
     padding: 0.04rem 0.13333333rem 0.41333333rem;
 }
-.register_vip h3{
+
+.register_vip h3 {
     height: 1.12rem;
     font-size: 0.533333rem;
     font-weight: normal;
     line-height: 1.12rem;
 }
-.register_vip .register_title{
+
+.register_vip .register_title {
     height: 1.6rem;
 }
-.register_vip .register_title p{
+
+.register_vip .register_title p {
     font-size: 0.32rem;
     line-height: 0.533333rem;
     color: #666;
 }
-.register_vip span{
+
+.register_vip span {
     display: block;
     line-height: 1.2rem;
     font-size: 0.48rem;
     color: #e15671;
 }
-.register_vip a{
+
+.register_vip a {
     display: block;
     width: 4.133333rem;
     height: 1.093333rem;
@@ -123,11 +134,14 @@ width: 10rem;
     line-height: 1.093333rem;
     font-weight: bold;
 }
+
 /* 妙味特色 */
-.characteristic{
+
+.characteristic {
     background-color: #a5d677;
 }
-.characteristic h3{
+
+.characteristic h3 {
     width: 10rem;
     height: 1.506667rem;
     line-height: 1.506667rem;
@@ -136,17 +150,20 @@ width: 10rem;
     font-weight: normal;
     color: #fff;
 }
-.characteristic_list{
+
+.characteristic_list {
     padding: 0 0.266667rem 0.533333rem;
 }
-.characteristic_list li{
+
+.characteristic_list li {
     width: 9.466667rem;
     height: 1.866667rem;
     margin: 0.533333rem 0 0;
     padding: 0.36rem 0 0;
     display: flex;
 }
-.characteristic_list li a{
+
+.characteristic_list li a {
     display: block;
     width: 1.866667rem;
     height: 1.866667rem;
@@ -154,10 +171,11 @@ width: 10rem;
     background-image: url("../images/icon1.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    margin: -0.36rem 0.266667rem 0 0; 
+    margin: -0.36rem 0.266667rem 0 0;
     border-radius: 50%;
 }
-.characteristic_list li span{
+
+.characteristic_list li span {
     width: 7.333333rem;
     height: 1.173333rem;
     display: block;
@@ -165,37 +183,48 @@ width: 10rem;
     font-size: 0.373333rem;
     line-height: 0.466667rem;
 }
+
 /* 学员作品 */
-.works{
-    width: 10rem ;
+
+.work {
+    width: 10rem;
     padding: 0.2rem 0 0;
+    /* height: 10rem; */
 }
-.works .works_txt{
+
+.work .works_txt {
     height: 1.346667rem;
     text-align: center;
     line-height: 1.346667rem;
     font-size: 0.533333rem;
 }
-.works .works_cont ul{
+
+.work .works_cont {
     display: flex;
     flex-wrap: wrap;
     padding: 0 0.266667rem;
 }
-.works .works_cont li{
+
+
+.work .works_cont a{
+    display: block;
     width: 4.733333rem;
     height: 4.733333rem;
     background: url("../images/work1.jpg") no-repeat;
     background-size: 100% 100%;
+    overflow: hidden;
 }
-.works .works_cont li .works_tit{
+
+.work .works_cont a .works_tit {
     display: block;
     width: 4.733333rem;
     height: 1.226667rem;
     padding: 0.493333rem 0 0;
-    background: linear-gradient(to top,rgba(83, 83, 83,0.7),rgba(83, 83, 83,0.5),rgba(83, 83, 83,0.3),rgba(83, 83, 83,0));
+    background: linear-gradient(to top, rgba(83, 83, 83, 0.7), rgba(83, 83, 83, 0.5), rgba(83, 83, 83, 0.3), rgba(83, 83, 83, 0));
     margin: 3.506667rem 0 0;
 }
-.works .works_cont li .works_tit storing{
+
+.work .works_cont a .works_tit storing {
     display: block;
     width: 2.093333rem;
     height: 0.733333rem;
@@ -205,19 +234,22 @@ width: 10rem;
     line-height: 0.733333rem;
     float: left;
 }
-.works .works_cont li .works_tit span{
+
+.work .works_cont a .works_tit span {
     display: block;
     width: 2.066667rem;
     height: 0.733333rem;
     float: right;
     display: flex;
 }
-.works_tit span em{
+
+.works_tit span em {
     display: block;
     margin: 0 0.253333rem 0 0;
     display: flex;
 }
-.works_tit span em i{
+
+.works_tit span em i {
     display: block;
     width: 0.32rem;
     height: 0.32rem;
@@ -225,16 +257,17 @@ width: 10rem;
     background: url("../images/chat.png") no-repeat;
     background-size: 100% 100%;
 }
-.works_tit span em font{
+
+.works_tit span em font {
     display: block;
     line-height: 0.666667rem;
     color: #fff;
     font-size: 0.32rem;
     font-style: normal;
 }
-.title{
+
+.title {
     text-align: center;
     margin: 0.133333rem 0;
     font-size: 0.32rem;
 }
-
