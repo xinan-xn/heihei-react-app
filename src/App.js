@@ -31,7 +31,7 @@ function App() {
       }
       <div style={
         {
-          transform: `translateX(${flag ? 4.5 : 0}rem)`
+          // transform: `translateX(${flag ? 4.5 : 0}rem)`
         }
       }>
         <Route path="/" exact component={Home}></Route>

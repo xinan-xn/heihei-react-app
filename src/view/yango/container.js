@@ -2,9 +2,9 @@ import React from 'react'
 import '../../css/yo-detail.css'
 function Container(props) {
     return (
-        <div className="main_box">
-{/* 学员作品 */}
-<div className="works">
+
+<div className="main_works">
+    {/* 学员作品 */}
     <h3>妙味“JS全栈-201607届”学员中级阶段课程作品展示</h3>
     {/* 主要内容 */}
     <div className="works_box">
@@ -147,8 +147,6 @@ function Container(props) {
             才有可能做出完成度更佳的作品，我们期待着这一天的到来。
         </div>
     </div>
-</div>
-{/* 点赞，留言 */}
 </div>
     );
 }
