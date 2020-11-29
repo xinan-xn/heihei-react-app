@@ -12,6 +12,10 @@ import { Route } from 'react-router-dom'
 import Course from "./view/course/index"
 import Home from "../src/view/dyc/home"
 
+
+import Course from '../src/view/course/index'
+import Div from '../src/view/zhl/page'
+
 // const transfrom={
 //   position:'relative',
 //   transform: 'translateX(4.5rem)'
@@ -36,8 +40,12 @@ function App() {
       }>
         <Route path="/" exact component={Home}></Route>
         <Route path="/course" exact component={Course}></Route>
+
+        <Route path="/lecturer" exact component={Div}></Route>
+
         <Route path="/detail" exact component={Detail}></Route>
         <Route path="/login" exact component={Login}></Route>
+
       </div>
 
 
