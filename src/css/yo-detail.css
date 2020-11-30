@@ -3,13 +3,15 @@
 .warp{
     width: 10rem;
     background: #dfe2e4;
+    overflow: hidden;
 }
 
 /* 学员作品 */
 .main_works{
     width: 9.466667rem;
-    height: 116rem;
+    /* height: 116rem; */
     margin: 0.266667rem auto;
+    padding: 0 0.133333rem;
     background: #ffffff;
     box-shadow: 0px 0px 0.13333333rem rgba(0, 0, 0, 0.16);
 }
