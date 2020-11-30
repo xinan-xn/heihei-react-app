@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './css/one.css'
-import Header from './view/xuenan/index'
+import Header from './view/login/index'
 
 import Login from './view/login/login'
 
