@@ -1,20 +1,21 @@
-/* @font-face {
+ @font-face {
   font-family: fzlt;
-  src: url("../font/方正兰亭纤黑_GBK.TTF");
+  src: url("./font/方正兰亭纤黑_GBK.TTF");
+
 }
 @font-face {
   font-family: pingfang;
-  src: url("../font/PingFang\ Bold.ttf");
+  src: url("./font/PingFang\ Bold.ttf");
 }
 @font-face {
   font-family: "iconfont";
   src:
-  url('../font/iconfont.ttf?t=1528878976361') format('truetype'), 
-  url('../font/iconfont.svg?t=1528878976361#iconfont') format('svg');
+  url('./font/iconfont.ttf?t=1528878976361') format('truetype'), 
+  url('./font/iconfont.svg?t=1528878976361#iconfont') format('svg');
 }
 .iconfont {
   font-family:"iconfont" !important;
-} */
+}
 .icon-kecheng:before { content: "\e607"; }
 .icon-dianhua:before { content: "\e701"; }
 .icon-zuanshi:before { content: "\e7ad"; }
@@ -41,7 +42,7 @@ body {
   color: #000;
 }
 body * {
-  -webkit-text-size-adjust: 100%;
+  /* -webkit-text-size-adjust: 100%; */
 }
 a,
 input,

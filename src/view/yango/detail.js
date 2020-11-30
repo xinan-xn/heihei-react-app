@@ -12,7 +12,7 @@ function Detail (){
     let [footData,FooData] = useState([]);
     useEffect(async () => {
         let getData = await lecturer({
-            article_id:1,
+            article_id:2,
         })
         let commentData = await getcomment({
             article_id:1,
