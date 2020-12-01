@@ -1,9 +1,13 @@
-import React,{useState,useEffect} from 'react'
-import '../../css/zm-detail.css'
 import Img from '../../images/zan_black.png'
-
+import React, { useState, useEffect } from 'react'
+import '../../css/zm-detail.css'
+import { good } from '../../server/api'
 
 function Foot(props) {
+    let [msg,setmsg]=useState("")
+    useEffect(()=>{
+console.log()
+    },[msg])
     console.log(props.footData, props);
     let { footData } = props;
     

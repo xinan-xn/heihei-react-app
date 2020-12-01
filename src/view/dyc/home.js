@@ -27,8 +27,9 @@ function Home() {
             category_id: 1,
             recommend: 1
         })
-        console.log(urllist)
+        // console.log(urllist)
     })
+    
     return (
         <div id="home_main">
             {/* 轮播图 */}
