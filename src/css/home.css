@@ -19,11 +19,25 @@ li{
 .content_list li {
     width: 4.693333rem;
     height: 8.24rem;
-    background: url("../images/list1_bg.jpg") no-repeat;
-    background-size: 100% 100%;
+    
     margin: 0 0.133333rem 0.266667rem;
 }
-
+.content_list .List1{
+    background: url("../images/list1_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.content_list .List2{
+    background: url("../images/list2_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.content_list .List3{
+    background: url("../images/list3_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.content_list .List4{
+    background: url("../images/list4_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
 .content_list li button {
     background: none;
     outline: none;
@@ -70,9 +84,15 @@ li{
     padding: 0.746667rem 0.4rem 0;
     margin: 0 auto;
 }
-
+.txt time{
+    display: block;
+    height: 0.866667rem;
+    line-height: 0.866667rem;
+    font-size: 0.48rem;
+    text-align: center;
+}
 .txt p {
-    font-size: 0.32rem;
+    font: 0.32rem fzlt;
 }
 
 .content_list a {
@@ -86,7 +106,7 @@ li{
     font-size: 0.426667rem;
     color: #fff;
     text-align: center;
-    line-height: 0.96rem;
+    line-height: 0.8rem;
     font-weight: bold;
 }
 
@@ -131,7 +151,7 @@ li{
     margin: 0 auto;
     color: #fff;
     font-size: 0.453333rem;
-    line-height: 1.093333rem;
+    line-height: 0.933333rem;
     font-weight: bold;
 }
 
@@ -161,6 +181,7 @@ li{
     margin: 0.533333rem 0 0;
     padding: 0.36rem 0 0;
     display: flex;
+    /* margin: 0.64rem; */
 }
 
 .characteristic_list li a {
@@ -168,11 +189,15 @@ li{
     width: 1.866667rem;
     height: 1.866667rem;
     background-color: #fff;
-    background-image: url("../images/icon1.png");
+    /* background-image: url("../images/icon1.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 100%; */
     margin: -0.36rem 0.266667rem 0 0;
     border-radius: 50%;
+}
+.characteristic_list li a img{
+    width: 100%;
+    height: 100%;
 }
 
 .characteristic_list li span {
@@ -189,7 +214,6 @@ li{
 .work {
     width: 10rem;
     padding: 0.2rem 0 0;
-    /* height: 10rem; */
 }
 
 .work .works_txt {
@@ -205,41 +229,50 @@ li{
     padding: 0 0.266667rem;
 }
 
-
-.work .works_cont a{
+.work .works_cont li{
+    width: 4.733333rem;
+    height: 4.733333rem;
+    position: relative;
+}
+.work .works_cont li a{
     display: block;
     width: 4.733333rem;
     height: 4.733333rem;
-    background: url("../images/work1.jpg") no-repeat;
-    background-size: 100% 100%;
-    overflow: hidden;
 }
-
-.work .works_cont a .works_tit {
+.works_tit{
+    position: absolute;
     display: block;
     width: 4.733333rem;
     height: 1.226667rem;
     padding: 0.493333rem 0 0;
-    background: linear-gradient(to top, rgba(83, 83, 83, 0.7), rgba(83, 83, 83, 0.5), rgba(83, 83, 83, 0.3), rgba(83, 83, 83, 0));
-    margin: 3.506667rem 0 0;
+    background: linear-gradient(to top, rgba(83, 83, 83, 1), rgba(83, 83, 83, 0.7), rgba(83, 83, 83, 0.5),rgba(83, 83, 83, 0.2), rgba(83, 83, 83, 0));
+    /* background:linear-gradient(rgba(0, 0, 0, 0), #000000); */
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
-.work .works_cont a .works_tit storing {
+.work .works_cont a img{
+    width: 100%;
+    height: 100%;
+}
+.work .works_cont li .works_tit storing {
     display: block;
     width: 2.093333rem;
     height: 0.733333rem;
-    text-align: right;
-    font-size: 0.346667rem;
+    text-align: center;
+    font-size: 0.32rem;
     color: #fff;
     line-height: 0.733333rem;
-    float: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
-.work .works_cont a .works_tit span {
+.work .works_cont li .works_tit span {
     display: block;
     width: 2.066667rem;
     height: 0.733333rem;
-    float: right;
     display: flex;
 }
 
@@ -254,20 +287,14 @@ li{
     width: 0.32rem;
     height: 0.32rem;
     margin: 0.146667rem 0.12rem 0 0;
-    background: url("../images/chat.png") no-repeat;
-    background-size: 100% 100%;
 }
-
+.works_tit span em i img{
+    width: 100%;
+}
 .works_tit span em font {
     display: block;
     line-height: 0.666667rem;
     color: #fff;
     font-size: 0.32rem;
     font-style: normal;
-}
-
-.title {
-    text-align: center;
-    margin: 0.133333rem 0;
-    font-size: 0.32rem;
-}
+} 
