@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import '../../css/zm-detail.css'
+import { good } from '../../server/api'
 
 function Foot(props) {
+    let [msg,setmsg]=useState("")
+    useEffect(()=>{
+console.log()
+    },[msg])
     console.log(props.footData, props);
     let { footData } = props;
     return (
@@ -10,7 +15,14 @@ function Foot(props) {
                 <span>
                     有{props.good}人觉得很赞
                 </span>
-                <span className="praise_span">
+                <span className="praise_span" onClick={async () => {
+                    //详情
+                    let {data} = await good({
+                        article_id: 1
+                    })
+                    console.log(data.code,data.msg)
+                    
+                }}>
                 </span>
             </p>
             <div className="comment_list_wrap">
@@ -26,10 +38,10 @@ function Foot(props) {
                                             </div>
                                             <div className="comment_txt">
                                                 {item.content}
-                            </div>
+                                            </div>
                                             <div className="comment_time">
                                                 {item.create_time}
-                            </div>
+                                            </div>
                                         </li>
                                     </div>
 
