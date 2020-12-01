@@ -1,9 +1,12 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import '../../css/zm-detail.css'
+import Img from '../../images/zan_black.png'
+
 
 function Foot(props) {
     console.log(props.footData, props);
     let { footData } = props;
+    
     return (
         <div className="comment">
             <p className="give_praise">
@@ -11,6 +14,7 @@ function Foot(props) {
                     有{props.good}人觉得很赞
                 </span>
                 <span className="praise_span">
+                    <img src={Img} alt=""/>
                 </span>
             </p>
             <div className="comment_list_wrap">
@@ -26,20 +30,19 @@ function Foot(props) {
                                             </div>
                                             <div className="comment_txt">
                                                 {item.content}
-                            </div>
+                                            </div>
                                             <div className="comment_time">
                                                 {item.create_time}
-                            </div>
+                                            </div>
                                         </li>
                                     </div>
-
                                 )
                             })
                         }
                     </ul>
                     <div className="loadmore">
                         <span className="loadmore_img"></span>
-                        正在加载更多...
+                        没有更多了
                     </div>
                 </div>
             </div>
