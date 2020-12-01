@@ -1,5 +1,5 @@
 import React from "react"
-
+import {useState,useEffect} from 'react'
 
 const footer1={
     width: '100%',
@@ -15,9 +15,15 @@ const  p={
     fontWeight: 'bold',
     color: '#fff'
 }
+
+
 function Bottom() {
     return (
-        <footer style={footer1}>
+        <footer 
+            style={footer1} 
+            onClick={()=>{
+                console.log("111")
+            }}>
             <p style={p}>回复本帖</p>
         </footer>
     )

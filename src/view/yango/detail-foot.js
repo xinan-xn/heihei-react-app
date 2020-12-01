@@ -1,3 +1,4 @@
+import Img from '../../images/zan_black.png'
 import React, { useState, useEffect } from 'react'
 import '../../css/zm-detail.css'
 import { good } from '../../server/api'
@@ -9,20 +10,15 @@ console.log()
     },[msg])
     console.log(props.footData, props);
     let { footData } = props;
+    
     return (
         <div className="comment">
             <p className="give_praise">
                 <span>
                     有{props.good}人觉得很赞
                 </span>
-                <span className="praise_span" onClick={async () => {
-                    //详情
-                    let {data} = await good({
-                        article_id: 1
-                    })
-                    console.log(data.code,data.msg)
-                    
-                }}>
+                <span className="praise_span">
+                    <img src={Img} alt=""/>
                 </span>
             </p>
             <div className="comment_list_wrap">
@@ -44,14 +40,13 @@ console.log()
                                             </div>
                                         </li>
                                     </div>
-
                                 )
                             })
                         }
                     </ul>
                     <div className="loadmore">
                         <span className="loadmore_img"></span>
-                        正在加载更多...
+                        没有更多了
                     </div>
                 </div>
             </div>
