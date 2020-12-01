@@ -1,4 +1,3 @@
-import Item from "antd/lib/list/Item"
 import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import "../../css/home.css"
@@ -26,7 +25,7 @@ function Works(props){
                     data.map((item)=>{
                         return (
                             <li key={item.id}>
-                                <Link to={"/detail"+item.id}>
+                                <Link to={`/detail/${item.id}`}>
                                     <img src={item.icon}/>
                                     <span className="works_tit">
                                         <storing>{item.title}</storing>
