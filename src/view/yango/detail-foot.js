@@ -1,126 +1,53 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import '../../css/zm-detail.css'
+import { good } from '../../server/api'
 
-function Foot() {
+function Foot(props) {
+    let [msg,setmsg]=useState("")
+    useEffect(()=>{
+console.log()
+    },[msg])
+    console.log(props.footData, props);
+    let { footData } = props;
     return (
         <div className="comment">
             <p className="give_praise">
                 <span>
-                    有6人觉得很赞
+                    有{props.good}人觉得很赞
                 </span>
-                <span className="praise_span">
+                <span className="praise_span" onClick={async () => {
+                    //详情
+                    let {data} = await good({
+                        article_id: 1
+                    })
+                    console.log(data.code,data.msg)
+                    
+                }}>
                 </span>
             </p>
             <div className="comment_list_wrap">
                 <div>
                     <ul className="comment_list">
-                        <li>
-                            <div className="comment_user">
-                                <span>张三</span>
-                            </div>
-                            <div className="comment_txt">
-                                哈哈哈
-                            </div>
-                            <div className="comment_time">
-                                2020-11-26 18:37:53
-                            </div>
-                        </li>
+                        {
+                            footData.map((item, index) => {
+                                return (
+                                    <div>
+                                        <li>
+                                            <div className="comment_user">
+                                                <span>{item.username}</span>
+                                            </div>
+                                            <div className="comment_txt">
+                                                {item.content}
+                                            </div>
+                                            <div className="comment_time">
+                                                {item.create_time}
+                                            </div>
+                                        </li>
+                                    </div>
 
-                        <li>
-                            <div className="comment_user">
-                                <span>张三</span>
-                            </div>
-                            <div className="comment_txt">
-                                写的真棒
-                            </div>
-                            <div className="comment_time">
-                                <span>2020-11-26 18:37:53</span>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div className="comment_user">
-                                <span>张三</span>
-                            </div>
-                            <div className="comment_txt">
-                                写的真棒
-                            </div>
-                            <div className="comment_time">
-                                <span>2020-11-26 18:37:53</span>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div className="comment_user">
-                                <span>张三</span>
-                            </div>
-                            <div className="comment_txt">
-                                写的真棒
-                            </div>
-                            <div className="comment_time">
-                                <span>2020-11-26 18:37:53</span>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div className="comment_user">
-                                <span>张三</span>
-                            </div>
-                            <div className="comment_txt">
-                                写的真棒
-                            </div>
-                            <div className="comment_time">
-                                <span>2020-11-26 18:37:53</span>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div className="comment_user">
-                                <span>张三</span>
-                            </div>
-                            <div className="comment_txt">
-                                写的真棒
-                            </div>
-                            <div className="comment_time">
-                                <span>2020-11-26 18:37:53</span>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div className="comment_user">
-                                <span>张三</span>
-                            </div>
-                            <div className="comment_txt">
-                                写的真棒
-                            </div>
-                            <div className="comment_time">
-                                <span>2020-11-26 18:37:53</span>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div className="comment_user">
-                                <span>张三</span>
-                            </div>
-                            <div className="comment_txt">
-                                写的真棒
-                            </div>
-                            <div className="comment_time">
-                                <span>2020-11-26 18:37:53</span>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div className="comment_user">
-                                <span>张三</span>
-                            </div>
-                            <div className="comment_txt">
-                                写的真棒
-                            </div>
-                            <div className="comment_time">
-                                <span>2020-11-26 18:37:53</span>
-                            </div>
-                        </li>
+                                )
+                            })
+                        }
                     </ul>
                     <div className="loadmore">
                         <span className="loadmore_img"></span>

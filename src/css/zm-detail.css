@@ -1,7 +1,4 @@
-.wrap{
-    width: 100%;
-    background-color:#dfe2e4;
-}
+
 .comment{
     width: 9.466667rem;
     margin: 0 auto;
@@ -20,7 +17,7 @@
     margin: 0 auto;
 }
 .praise_span{
-    width: 0.36rem;
+    width: 0.7rem;
     height:0.693333rem;
     float: right;
     margin-right: 0.26666667rem;
