@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import '../../css/yo-detail.css'
 import '../../css/zm-detail.css'
 import Banner from '../../component/Banner'
 import Container from '../yango/container'
 import Foot from '../yango/detail-foot'
-import Bottom from './bottom-f'
 import CallFoot from './callfoot'
 
 import { lecturer, getcomment, good, isLogin } from '../../server/api'
@@ -16,6 +15,7 @@ function Detail(props) {
     let [getGood, setGood] = useState([]);
     let [artid, setArtid] = useState(match.params.id);
     let [isLogi, setLogi] = useState(false);
+    let [isLikes,setLikes] = useState(false);
     useEffect(async () => {
         //详情
         let getData = await lecturer({
@@ -47,20 +47,20 @@ function Detail(props) {
 
     return (
         // <div>
-        <div className="warp">
-            {/*轮播图*/}
-            <Banner></Banner>
-            {/*主体内容*/}
-            <Container data={data}></Container>
-            {/*底部*/}
-            <Foot footData={footData} good={data.good} getGood={getGood} artid={artid}></Foot>
-            {/*回复本贴*/}
-            <CallFoot isLogi={isLogi}></CallFoot>
-            {/* <Bottom></Bottom> */}
+        <Fragment>
+            <div className="warp">
+                {/*轮播图*/}
+                <Banner></Banner>
+                {/*主体内容*/}
+                <Container data={data}></Container>
+                {/*底部*/}
+                <Foot footData={footData} good={data.good} getGood={getGood} artid={artid}></Foot>
+                {/*回复本贴*/}
+                <CallFoot isLogi={isLogi} isLikes={isLikes}></CallFoot>
+            </div>
 
-            
-            {/* <div className="aaa">123</div> */}
-        </div>
+        </Fragment>
+
 
         // </div>
     )
