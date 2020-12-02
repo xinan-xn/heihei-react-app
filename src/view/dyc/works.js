@@ -11,7 +11,8 @@ function Works(props){
         let urllist = await getList({
             sort: 1,
             category_id: 1,
-            recommend: 1
+            recommend: 1,
+            order:"asc"
         })
         // console.log(urllist)    
         setData(urllist.data)
