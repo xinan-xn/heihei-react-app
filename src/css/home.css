@@ -19,7 +19,6 @@ li{
 .content_list li {
     width: 4.693333rem;
     height: 8.24rem;
-    
     margin: 0 0.133333rem 0.266667rem;
 }
 .content_list .List1{
@@ -38,7 +37,14 @@ li{
     background: url("../images/list4_bg.jpg") no-repeat;
     background-size: 100% 100%;
 }
+.list_li{
+    width: 4.693333rem;
+    height: 2.133333rem;
+    position: relative;
+    overflow: hidden;
+}
 .content_list li button {
+    position: absolute;
     background: none;
     outline: none;
     width: 2.266667rem;
@@ -52,16 +58,16 @@ li{
 .content_list .list_title {
     width: 4.693333rem;
     height: 1.026667rem;
-    margin: -0.466667rem 0 0;
+    margin: 1.106667rem 0 0;
     font-size: 0.426667rem;
     text-align: center;
     color: #fff;
+    font-weight: normal;
 }
 
 .content_list .list_title span {
     display: block;
     font: 0.32rem fzlt;
-    margin: 0.08rem 0;
 }
 
 .content_list .price {
@@ -98,7 +104,7 @@ li{
     width: 2.76rem;
     height: 0.96rem;
     padding: 0 0.093333rem 0.16rem 0;
-    margin: 0 auto;
+    margin: 0 auto ;
     background: url("../images/btn_bg.png") no-repeat;
     background-size: 100% 100%;
     font-size: 0.426667rem;

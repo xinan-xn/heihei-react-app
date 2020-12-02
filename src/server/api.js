@@ -88,8 +88,8 @@ export async function login(params) {
 
 // 登出
 
-export async function logout(params) {
-    return await fetchPost("/user/logout", params)
+export  function logout(params) {
+    return  fetchPost("/user/logout", params)
 }
 
 //详情

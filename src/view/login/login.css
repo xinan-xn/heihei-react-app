@@ -68,7 +68,7 @@
 .login_form input[type="text"],
 input[type="password"] {
   color: #666666;
-  font: 0.346667rem 0.973333rem fzlt;
+  font-size: 0.266667rem;
   text-indent: 0.8rem;
   display: block;
   width: 100%;
@@ -140,6 +140,7 @@ input[type="password"] {
   width: 100%;
   text-indent: 0;
   background: none;
+  font-size: 0.266667rem;
   border-bottom: 0.026667rem solid #c1c8cb;
 }
 .register_box input[type="text"]:focus,
