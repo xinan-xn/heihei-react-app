@@ -1,32 +1,24 @@
 import React from "react"
-import {useState,useEffect} from 'react'
+import { useState, useEffect } from 'react'
 
-const footer1={
-    width: '100%',
-    height: '1.14666667rem',
-    background: '#e64d6b',
-    bottom: 0
+//登陆成功后点击
+function Message(props) {
+
+    return (<div
+        className="message_wrap"
+
+    >
+        <textarea
+className="textarea"
+            onChange={(e) => {
+                
+            }}
+        />
+        <footer className="f-footer"
+            onClick={() => {
+
+            }}
+        >发表评论</footer>
+    </div>)
 }
-
-const  p={
-    fontSize:'0.4rem',
-    textAlign: 'center',
-    lineHeight:' 1.146667rem',
-    fontWeight: 'bold',
-    color: '#fff'
-}
-
-
-function Bottom() {
-    return (
-        <footer 
-            style={footer1} 
-            onClick={()=>{
-                console.log("111")
-            }}>
-            <p style={p}>回复本帖</p>
-        </footer>
-    )
-}
-
-export default Bottom;
+export default Message;
