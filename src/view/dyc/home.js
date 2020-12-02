@@ -5,9 +5,7 @@ import Works from "./works"
 import Content from "./content"
 import Characterisitic from "./characteristic"
 import { getList } from '../../server/api'
-import BScroll from "better-scroll"; 
-
-
+// import BScroll from "better-scroll"; 
 
 
 function Home(props) {
