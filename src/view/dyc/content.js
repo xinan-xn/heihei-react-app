@@ -20,7 +20,8 @@ function Content(){
                 <h3 className="list_title"
                     style={{
                         height:"1.946667rem",
-                        padding:"0.64rem 0 0"
+                        padding:"0.64rem 0 0",
+                        margin:"0.173333rem 0 0"
                     }}
                 >
                     VIP自学营
@@ -39,7 +40,8 @@ function Content(){
                 <h3 className="list_title"
                     style={{
                         height:"1.946667rem",
-                        padding:"0.64rem 0 0"
+                        padding:"0.64rem 0 0",
+                        margin:"0.173333rem 0 0"
                     }}
                 >
                     VIP自学营

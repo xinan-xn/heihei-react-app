@@ -1,24 +1,49 @@
 import Img from '../../images/zan_black.png'
 import React, { useState, useEffect } from 'react'
 import '../../css/zm-detail.css'
-import { good } from '../../server/api'
+import { good, getGood, cancelGood } from '../../server/api'
 
 function Foot(props) {
-    let [msg,setmsg]=useState("")
-    useEffect(()=>{
-console.log()
-    },[msg])
+    let [msg, setmsg] = useState("")
+    useEffect(() => {
+        console.log()
+    }, [msg])
     console.log(props.footData, props);
-    let { footData } = props;
-    
+    let { footData, artid } = props;
+
     return (
         <div className="comment">
             <p className="give_praise">
                 <span>
                     有{props.good}人觉得很赞
                 </span>
-                <span className="praise_span">
-                    <img src={Img} alt=""/>
+                <span className="praise_span" onClick={async () => {
+                    //点赞
+                    let toGood = await good({
+                        article_id: artid
+                    })
+                    console.log("点赞", toGood)
+                    if (toGood.data.code === 0) {
+                        //是否点赞
+                        let isGood = await getGood({
+                            article_id: artid
+                        })
+                        //取消点赞
+                        let delGood = await cancelGood({
+                            goodid:isGood,
+                            article_id: artid
+                        })
+                        console.log("是否点赞", isGood)
+                        console.log("取消点赞", delGood)
+                    }else if(toGood.data.code === 1){
+                        console.log("点赞", toGood.data.msg)
+                        alert("请登录")
+                    }
+
+
+
+                }}>
+                    <img src={Img} alt="" />
                 </span>
             </p>
             <div className="comment_list_wrap">
