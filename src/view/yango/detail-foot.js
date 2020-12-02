@@ -24,6 +24,8 @@ function Foot(props) {
                     setLike(!isLike)
                     //点赞
                     let toGood = await good({
+                        article_id:artid
+                    })
 
                     //是否点赞
                     let isGood = await getGood({
@@ -49,23 +51,6 @@ function Foot(props) {
                     }
                 }} 
                 className={"praise_span " + (isLike ? "praise_span1" : "praise_span")}>
-
-                        console.log("取消点赞", delGood)
-                    } else if (isGood.data.code===3) {//否则点赞
-                        //点赞
-                        let toGood = await good({
-                            article_id: artid
-                        })
-                        console.log("点赞", toGood)
-                    }
-
-
-
-
-
-                }}>
-                    <img src={Img} alt="" />
-
                 </span>
             </p>
             <div className="comment_list_wrap">
