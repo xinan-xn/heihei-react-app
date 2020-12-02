@@ -5,12 +5,12 @@ import Works from "./works"
 import Content from "./content"
 import Characterisitic from "./characteristic"
 import { getList } from '../../server/api'
+import BScroll from "better-scroll"; 
 
 
 
 
-
-function Home() {
+function Home(props) {
     // useEffect(() => {
     //     getList({
     //         sort: 1,
@@ -27,8 +27,9 @@ function Home() {
             category_id: 1,
             recommend: 1
         })
-        console.log(urllist)
+        // console.log(urllist)
     })
+    
     return (
         <div id="home_main">
             {/* 轮播图 */}

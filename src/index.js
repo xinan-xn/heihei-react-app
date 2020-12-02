@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import 'lib-flexible/flexible'
-import './index.css'
+// import 'lib-flexible/flexible'
+import 'lib-flexible';
+import './reset.css'
 import {BrowserRouter} from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 

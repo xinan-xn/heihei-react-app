@@ -1,15 +1,11 @@
 import React from "react"
-
+import {useState,useEffect} from 'react'
 
 const footer1={
-    position: 'fixed',
     width: '100%',
     height: '1.14666667rem',
     background: '#e64d6b',
-    // top: '100px',
     bottom: 0
-    /* margin: 0 auto; */
-    /* z-index: 10; */
 }
 
 const  p={
@@ -19,9 +15,15 @@ const  p={
     fontWeight: 'bold',
     color: '#fff'
 }
+
+
 function Bottom() {
     return (
-        <footer style={footer1}>
+        <footer 
+            style={footer1} 
+            onClick={()=>{
+                console.log("111")
+            }}>
             <p style={p}>回复本帖</p>
         </footer>
     )
