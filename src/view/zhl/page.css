@@ -37,11 +37,13 @@
   height: 4rem;
 }
 .lecturer_list li {
-  width: 2.37333333rem;
+  width: 2rem;
   margin: 0 auto;
   flex: none;
 }
 .lecturer_list li img {
+  height: 2rem;
+  margin: 0 auto;
   box-sizing: border-box;
   border-radius: 50%;
   background: #5394cb;
@@ -337,7 +339,6 @@
   color: #fff0cc;
   text-align: center;
   padding-bottom: 0.17333333rem;
-  background: url("") repeat-x left bottom;
 }
 .elastic_content {
   margin-top: 0.44rem;
