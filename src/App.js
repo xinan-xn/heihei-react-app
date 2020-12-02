@@ -13,14 +13,29 @@ import Nav from './view/xuenan/nav'
 import IndexRoute from "../src/router/index"
 
 function App() {
+
   const [flag, setFlag] = useState(false)
+  const [isUser, setIsUser] = useState(false)
+  const [users, setUser] = useState('')
   useEffect(() => {
-    console.log(flag);
-  }, [flag])
+    let User = localStorage.getItem("user")
+    if (User === null) {
+      setIsUser(false)
+    } else {
+      setIsUser(true)
+    }
+    console.log("App", User)
+  }, [])
   return (
     <div className="App">
 
-      <Header setFlag={setFlag} flag={flag}></Header>
+      <Header
+        setFlag={setFlag}
+        flag={flag}
+        users={users}
+        setUser={setUser}
+        isUser={isUser}
+      ></Header>
       {
         flag ? <Nav></Nav> : ""
       }
