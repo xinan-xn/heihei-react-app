@@ -1,10 +1,11 @@
-import Img from '../../images/zan_black.png'
 import React, { useState, useEffect } from 'react'
 import '../../css/zm-detail.css'
 import { good, getGood, cancelGood } from '../../server/api'
 
 function Foot(props) {
 
+
+    let [isLike,setLike] = useState(props.isLikes)
     let [msg, setmsg] = useState("")
     useEffect(() => {
         console.log()
@@ -19,8 +20,14 @@ function Foot(props) {
                     有{props.good}人觉得很赞
                 </span>
                 <span className="praise_span" onClick={async () => {
+
+                    setLike(!isLike)
+                    //点赞
+                    let toGood = await good({
+
                     //是否点赞
                     let isGood = await getGood({
+
                         article_id: artid
                     })
                     console.log("是否点赞", isGood.data)
@@ -31,6 +38,18 @@ function Foot(props) {
                             goodid: isGood.data.gooid,
                             article_id: artid
                         })
+
+
+                        console.log("是否点赞", isGood)
+                        console.log("取消点赞", delGood)
+
+                    }else if(toGood.data.code === 1){
+                        console.log("点赞", toGood.data.msg)
+                        alert("请登录")
+                    }
+                }} 
+                className={"praise_span " + (isLike ? "praise_span1" : "praise_span")}>
+
                         console.log("取消点赞", delGood)
                     } else if (isGood.data.code===3) {//否则点赞
                         //点赞
@@ -46,6 +65,7 @@ function Foot(props) {
 
                 }}>
                     <img src={Img} alt="" />
+
                 </span>
             </p>
             <div className="comment_list_wrap">

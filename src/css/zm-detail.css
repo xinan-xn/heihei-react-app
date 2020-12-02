@@ -20,9 +20,26 @@
     width: 0.7rem;
     height: 0.693333rem;
     float: right;
+    background: url("../images/zan_black.png") no-repeat;
     margin-right: 0.26666667rem;
     margin-top: 0.173333rem;
+  
 }
+
+
+.praise_span1{
+    width: 0.7rem;
+    height:0.693333rem;
+    float: right;
+    background: url("../images/dianzan.png") no-repeat;
+    margin-right: 0.26666667rem;
+    margin-top: 0.173333rem;
+  
+}
+
+
+.comment_list_wrap{
+    width:100%;
 
 .praise_span img {
     width:0.4rem;
@@ -31,6 +48,7 @@
 
 .comment_list_wrap {
     width: 100%;
+
     margin: 0 auto;
 }
 
@@ -92,6 +110,8 @@
 .message_wrap {
     width: 10rem;
     height: auto;
+    position: absolute;
+    bottom: 0;
     /* background-color: greenyellow; */
 }
 
@@ -103,11 +123,21 @@
 
 .f-footer {
     width: 100%;
-    height: 1.14666667rem;
+    position: absolute;
+    bottom: 0;
+    height:1.14666667rem;
     background: #e64d6b;
     font-size: 0.4rem;
     text-align: center;
     line-height: 1.146667rem;
     font-weight: bold;
     color: #fff;
+}
+.unshow{
+    transform: translateY(0rem);
+    transition: 0.5s transform;
+}
+.show{
+    transform: translateY(3rem);
+    transition: 0.5s transform;
 }

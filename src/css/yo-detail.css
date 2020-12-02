@@ -5,6 +5,7 @@
     margin: 0 auto;
     background: #dfe2e4;
     overflow: hidden;
+    position: relative;
 }
 
 /* 学员作品 */
