@@ -39,16 +39,51 @@
 }
 
 .user {
+    
     width: 0.66666667rem;
     height: 0.70666667rem;
     position: absolute;
     top: 0.22666667rem;
     right: 0.26666667rem;
-    background: url("../images/icon_user.png") no-repeat;
+    color:#fff;
     background-size: 100% auto;
 }
 .user a{
     display: block;
     width: 0.66666667rem;
     height: 0.70666667rem;
+    background: url("../images/icon_user.png") no-repeat;
+    background-size: 0.66666667rem 0.70666667rem;
+}
+
+.header-btn-right{
+    float: right;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    width: .8rem;
+}
+.header-user{
+    margin-top: 0.2rem;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 0.3rem;
+    /* margin-right:0; */
+    text-align: center;
+    color: rgba(255, 255, 255, .8);
+}
+.header-logout-btn{
+    display: block;
+    position: absolute;
+    width: 0.933333rem;
+    height: 0.533333rem;
+    color: rgb(235, 163, 135);
+    font-size: 0.3rem;
+    background-color:#323436 ;
+    top: 0.973333rem;
+    right: -0.266667rem;
+    text-align: center;
+    /* margin-top: -0.3rem; */
+    /* display: none; */
 }
