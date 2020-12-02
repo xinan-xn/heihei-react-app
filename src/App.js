@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './css/one.css'
 import Header from './view/xuenan/index'
 
-import Login from './view/login/login'
+import BLogin from './view/login/login'
 
 import Detail from './view/yango/detail'
 // import Head from './view/xuenan/head'
@@ -43,10 +43,9 @@ function App() {
         <Route path="/lecturer" exact component={Div}></Route>
 
         <Route path="/detail" exact component={Detail}></Route>
-        <Route path="/login" exact component={Login}></Route>
+        <Route path="/login" exact component={BLogin}></Route>
 
       </div>
-
 
     </div>
 
