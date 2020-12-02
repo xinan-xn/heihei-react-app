@@ -4,6 +4,7 @@ import '../../css/zm-detail.css'
 import { good, getGood, cancelGood } from '../../server/api'
 
 function Foot(props) {
+
     let [msg, setmsg] = useState("")
     useEffect(() => {
         console.log()
@@ -18,27 +19,28 @@ function Foot(props) {
                     有{props.good}人觉得很赞
                 </span>
                 <span className="praise_span" onClick={async () => {
-                    //点赞
-                    let toGood = await good({
+                    //是否点赞
+                    let isGood = await getGood({
                         article_id: artid
                     })
-                    console.log("点赞", toGood)
-                    if (toGood.data.code === 0) {
-                        //是否点赞
-                        let isGood = await getGood({
-                            article_id: artid
-                        })
+                    console.log("是否点赞", isGood.data)
+                    //如果返回0则说明点过赞,取消
+                    if (isGood.data.code === 0) {
                         //取消点赞
                         let delGood = await cancelGood({
-                            goodid:isGood,
+                            goodid: isGood.data.gooid,
                             article_id: artid
                         })
-                        console.log("是否点赞", isGood)
                         console.log("取消点赞", delGood)
-                    }else if(toGood.data.code === 1){
-                        console.log("点赞", toGood.data.msg)
-                        alert("请登录")
+                    } else if (isGood.data.code===3) {//否则点赞
+                        //点赞
+                        let toGood = await good({
+                            article_id: artid
+                        })
+                        console.log("点赞", toGood)
                     }
+
+
 
 
 
