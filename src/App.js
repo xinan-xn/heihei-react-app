@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import './css/one.css'
 import Header from './view/xuenan/index'
+
+
+import BLogin from './view/login/login'
+
+import Detail from './view/yango/detail'
+// import Head from './view/xuenan/head'
+
+
 import Nav from './view/xuenan/nav'
 import IndexRoute from "../src/router/index"
 
@@ -21,9 +29,10 @@ function App() {
           transform: `translateX(${flag ? 4.5 : 0}rem)`
         }
       }>
-        <IndexRoute></IndexRoute>
-      </div>
 
+        <IndexRoute></IndexRoute>
+
+      </div>
 
     </div>
 

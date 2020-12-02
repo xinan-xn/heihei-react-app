@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
+import Banner from "../zhl/Banner"
 import './page.css';
 function Nav(){
     return (
@@ -6,19 +7,11 @@ function Nav(){
         <h2>
             <span></span>
         </h2>
-        <div className="banner">
+        {/* <div className="banner">
             <div className="banner_img">
                 <ul className="banner_list clearfix">
                     <li>
                         <ul className="lecturer_list">
-                            <li>
-                                <img src={require('../../images/teacher_photo.png').default}></img>
-                                <p>莫涛</p>
-                            </li>
-                            <li>
-                                <img src={require('../../images/teacher_photo.png').default}></img>
-                                <p>莫涛</p>
-                            </li>
                             <li>
                                 <img src={require('../../images/teacher_photo.png').default}></img>
                                 <p>莫涛</p>
@@ -32,7 +25,8 @@ function Nav(){
                 <li className=""></li>
                 <li className=""></li>
             </ul>
-        </div>
+        </div> */}
+    <Banner></Banner>
     </div>
     )
 }

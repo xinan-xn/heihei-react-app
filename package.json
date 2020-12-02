@@ -97,6 +97,10 @@
       "last 1 safari version"
     ]
   },
+
+  "devDependencies": {
+    "http-proxy-middleware": "^1.0.6"
+
   "jest": {
     "roots": [
       "<rootDir>/src"
@@ -154,5 +158,6 @@
   },
   "devDependencies": {
     "lib-flexible": "^0.3.2"
+
   }
 }
