@@ -5,14 +5,17 @@ import Banner from '../../component/Banner'
 import Container from '../yango/container'
 import Foot from '../yango/detail-foot'
 import Bottom from './bottom-f'
-import { lecturer, getcomment, good } from '../../server/api'
+import CallFoot from './callfoot'
+
+import { lecturer, getcomment, good, isLogin } from '../../server/api'
 function Detail(props) {
     let [data, setData] = useState([]);
-    let {match}=props
+    let { match } = props
     // console.log('传过来的',match.params.id)
     let [footData, FooData] = useState([]);
     let [getGood, setGood] = useState([]);
     let [artid, setArtid] = useState(match.params.id);
+    let [isLogi, setLogi] = useState(false);
     useEffect(async () => {
         //详情
         let getData = await lecturer({
@@ -35,6 +38,11 @@ function Detail(props) {
         setGood(
             praiseGood
         )
+        //是否登录
+        let flag = await isLogin()
+        if (flag.data.code === 0) {
+            setLogi(true)
+        }
     }, [])
 
     return (
@@ -47,7 +55,10 @@ function Detail(props) {
             {/*底部*/}
             <Foot footData={footData} good={data.good} getGood={getGood} artid={artid}></Foot>
             {/*回复本贴*/}
-            <Bottom></Bottom>
+            <CallFoot isLogi={isLogi}></CallFoot>
+            {/* <Bottom></Bottom> */}
+
+            
             {/* <div className="aaa">123</div> */}
         </div>
 
