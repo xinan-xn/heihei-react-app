@@ -9,9 +9,9 @@ function Foot(props) {
     useEffect(() => {
         console.log()
     }, [msg])
-    console.log(props.footData, props);
+    // console.log(props.footData, props);
     let { footData, artid, sompeople, setsome } = props;
-
+let sum=sompeople
     return (
         <div className="comment">
             <p className="give_praise">
@@ -25,7 +25,7 @@ function Foot(props) {
                     let isGood = await getGood({
                         article_id: artid
                     })
-                    console.log("是否点赞", isGood.data)
+                    // console.log("是否点赞", isGood.data)
                     //如果返回0则说明点过赞,取消
                     if (isGood.data.code === 0) {
                         //取消点赞
@@ -33,8 +33,9 @@ function Foot(props) {
                             goodid: isGood.data.gooid,
                             article_id: artid
                         })
-                        setsome(sompeople - 1)
-                        console.log("取消点赞", delGood)
+                        sum--
+                        setsome(sum)
+                        // console.log("取消点赞", delGood)
 
                     } else if (isGood.data.code === 1) {//未登录
                         console.log(isGood.data.msg)
@@ -43,9 +44,10 @@ function Foot(props) {
                         let toGood = await good({
                             article_id: artid
                         })
-                        setsome(sompeople + 1)
+                        sum++
+                        setsome(sum)
 
-                        console.log("点赞", toGood)
+                        // console.log("点赞", toGood)
                     }
                 }}
                     className={"praise_span " + (like ? "praise_span1" : "praise_span")}>

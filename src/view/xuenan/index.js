@@ -47,7 +47,7 @@ function Header(props) {
 
     useEffect(() => {
         isLogin().then(res => {
-            console.log(res.data)
+            // console.log(res.data)
             if (res.data.code == 0) {
                 setxinan(true)
                 setxxxx(res.data.username)

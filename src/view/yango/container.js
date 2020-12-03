@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../css/yo-detail.css'
 function Container(props) {
-    console.log(props);
+    // console.log(props);
     let {data} = props;
     return (
         <div className="main_works">
