@@ -153,7 +153,8 @@
     ]
   },
   "devDependencies": {
+    "http-proxy-middleware": "^1.0.6",
     "lib-flexible": "^0.3.2",
-    "http-proxy-middleware": "^1.0.6"
+    "swiper": "^6.3.5"
   }
 }

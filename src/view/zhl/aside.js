@@ -1,40 +1,53 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
+
+import BScroll from "better-scroll";
+import {getList} from '../../server/api'
 import './page.css'
 
-function Aside(){
+function Aside(props){
+    let [data,setData] = useState([])
+    let {id,log,setLog} = props
+    // console.log(props)
+     useEffect(async () => {
+       const data = await getList({order:'desc',sort:"sort",category_id:2,recommend:0})
+    //   console.log(data)
+      setData(data.data)
+    },[])
+    
+
     return (
-        <aside className="elastic">
-            <div className="elastic_box">
-                <span className="close">关闭</span>
+        <aside className={log ? "elastic" : "elastics"}
+        // "elastic"
+        >
+            {
+                data.map(item=>{
+                                if(item.id == id){
+                                    return (
+                      <div className="elastic_box">
+                <span className="close" 
+                onClick={()=>{
+                    setLog(false)
+                }}>关闭</span>
                 <div className="elastic_img">
-                    <img src={require('../../images/teacher_photo.png').default}></img>
+                    <img src={item.icon}></img>
                 </div>
                 <div className="elastic_txt">
-                    <h3>王允-妙味课堂 全职讲师</h3>
+                <h3>{item.title}-妙味课堂 全职讲师</h3>
                     <div className="elastic_content">
-                        <div>
-                            <ul id="teacher">
-                                <li>
-                                    妙味课堂创始人之一，精通H5移动端开发技巧，</li>
-                                <li>
-                                    <span className="dot"></span>
-                                    妙味官网核心功能开发者、海量的H5、CSS3、移动端系列视频录制者</li>
-                                <li>
-                                    <span className="dot"></span>妙味最新移动端课程研发者，同时具备多年丰富的教学经历，</li>
-                                <li>
-                                    <span className="dot"></span>为人谦逊，处事低调，与之接触学员均对其赞赏有加</li>
-                                <li>
-                                    <span className="dot"></span>现主导妙味新课程研发与移动端课程标准化工作</li>
-                                <li>
-                                    <span className="dot"></span>同时负责妙味实体班、远程班、公开课与最新案例研究重任。</li>
-                            </ul>
-                        </div>
+                        
+                                      <div dangerouslySetInnerHTML={{__html:item.content}}></div>
+                              
+
                     </div>
                     <div className="bscroll-vertical-scrollbar">
                         <div className="bscroll-indicator"></div>
                     </div>
                 </div>
             </div>
+                 )
+                }
+            })
+        }  
         </aside>
 
     )

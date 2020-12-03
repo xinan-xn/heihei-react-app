@@ -1,7 +1,8 @@
-import React,{useState,useEffect} from 'react';
+import React,{} from 'react';
 import Banner from "../zhl/Banner"
 import './page.css';
-function Nav(){
+function Nav(props){
+    // let [arr] = props
     return (
     <div className="teacher_banner">
         <h2>
@@ -26,7 +27,7 @@ function Nav(){
                 <li className=""></li>
             </ul>
         </div> */}
-    <Banner></Banner>
+    <Banner  ></Banner>
     </div>
     )
 }
