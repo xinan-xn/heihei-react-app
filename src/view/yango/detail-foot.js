@@ -4,32 +4,25 @@ import { good, getGood, cancelGood } from '../../server/api'
 
 function Foot(props) {
 
-
-    let [isLike,setLike] = useState(props.isLikes)
+    let { setlike, like } = props
     let [msg, setmsg] = useState("")
     useEffect(() => {
         console.log()
     }, [msg])
     console.log(props.footData, props);
-    let { footData, artid } = props;
+    let { footData, artid, sompeople, setsome } = props;
 
     return (
         <div className="comment">
             <p className="give_praise">
                 <span>
-                    有{props.good}人觉得很赞
+                    有{sompeople}人觉得很赞
                 </span>
                 <span className="praise_span" onClick={async () => {
 
-                    setLike(!isLike)
-                    //点赞
-                    let toGood = await good({
-                        article_id:artid
-                    })
-
+                    setlike(!like)
                     //是否点赞
                     let isGood = await getGood({
-
                         article_id: artid
                     })
                     console.log("是否点赞", isGood.data)
@@ -40,17 +33,22 @@ function Foot(props) {
                             goodid: isGood.data.gooid,
                             article_id: artid
                         })
-
-
-                        console.log("是否点赞", isGood)
+                        setsome(sompeople - 1)
                         console.log("取消点赞", delGood)
 
-                    }else if(toGood.data.code === 1){
-                        console.log("点赞", toGood.data.msg)
-                        alert("请登录")
+                    } else if (isGood.data.code === 1) {//未登录
+                        console.log(isGood.data.msg)
+                    } else if (isGood.data.code === 3) {
+                        //点赞
+                        let toGood = await good({
+                            article_id: artid
+                        })
+                        setsome(sompeople + 1)
+
+                        console.log("点赞", toGood)
                     }
-                }} 
-                className={"praise_span " + (isLike ? "praise_span1" : "praise_span")}>
+                }}
+                    className={"praise_span " + (like ? "praise_span1" : "praise_span")}>
                 </span>
             </p>
             <div className="comment_list_wrap">

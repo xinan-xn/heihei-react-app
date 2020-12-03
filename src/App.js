@@ -1,22 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './css/one.css'
 import Header from './view/xuenan/index'
-
-
-import BLogin from './view/login/login'
-
-import Detail from './view/yango/detail'
-// import Head from './view/xuenan/head'
-
-
 import Nav from './view/xuenan/nav'
 import IndexRoute from "../src/router/index"
 
 function App() {
-
   const [flag, setFlag] = useState(false)
   const [isUser, setIsUser] = useState(false)
-  const [users, setUser] = useState('')
   useEffect(() => {
     let User = localStorage.getItem("user")
     if (User === null) {
@@ -32,9 +22,8 @@ function App() {
       <Header
         setFlag={setFlag}
         flag={flag}
-        users={users}
-        setUser={setUser}
         isUser={isUser}
+        setIsUser={setIsUser}
       ></Header>
       {
         flag ? <Nav></Nav> : ""

@@ -6,16 +6,19 @@ import Container from '../yango/container'
 import Foot from '../yango/detail-foot'
 import CallFoot from './callfoot'
 
-import { lecturer, getcomment, good, isLogin } from '../../server/api'
+import { lecturer, getcomment, getGood, isLogin } from '../../server/api'
 function Detail(props) {
     let [data, setData] = useState([]);
+    let [sompeople, setsome] = useState([]);
     let { match } = props
     // console.log('传过来的',match.params.id)
     let [footData, FooData] = useState([]);
-    let [getGood, setGood] = useState([]);
     let [artid, setArtid] = useState(match.params.id);
     let [isLogi, setLogi] = useState(false);
-    let [isLikes,setLikes] = useState(false);
+    let [isLikes, setLikes] = useState(false);
+    //判断是否打开页面点赞
+    let [like, setlike] = useState(false);
+
     useEffect(async () => {
         //详情
         let getData = await lecturer({
@@ -24,19 +27,27 @@ function Detail(props) {
         setData(
             getData.data
         )
-        //评论
+        setsome(
+            getData.data.good
+        )
+        //是否点赞
+        let isgo = await getGood({
+            article_id: match.params.id,
+        })
+        console.log(isgo)
+        if (isgo.data.code === 0) {
+            setlike(true)
+
+        } else if (isgo.data.code === 3) {
+            setlike(false)
+        }
+
+        //评论里边有点赞人数
         let commentData = await getcomment({
             article_id: match.params.id,
         })
         FooData(
             commentData.data,
-        )
-        //点赞
-        let praiseGood = await good({
-            article_id: match.params.id,
-        })
-        setGood(
-            praiseGood
         )
         //是否登录
         let flag = await isLogin()
@@ -54,7 +65,15 @@ function Detail(props) {
                 {/*主体内容*/}
                 <Container data={data}></Container>
                 {/*底部*/}
-                <Foot footData={footData} good={data.good} getGood={getGood} artid={artid}></Foot>
+                <Foot
+                    footData={footData}
+                    sompeople={sompeople}
+                    setsome={setsome}
+                    getGood={getGood}
+                    artid={artid}
+                    setlike={setlike}
+                    like={like}
+                ></Foot>
                 {/*回复本贴*/}
                 <CallFoot isLogi={isLogi} isLikes={isLikes}></CallFoot>
             </div>

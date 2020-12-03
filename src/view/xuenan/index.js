@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../../css/one.css'
 import { Link } from 'react-router-dom'
-import { logout } from '../../server/api'
+import { logout, isLogin } from '../../server/api'
 function UserGreeting(props) {
     return <Link to="/login" ></Link>;
 }
@@ -41,12 +41,23 @@ function GuestGreeting(props) {
 
 function Header(props) {
     let { setFlag, flag, users, setUser, isUser } = props
+    let [xinan, setxinan] = useState(true)
+    let [setp, setSetp] = useState(false)
+    let [xxxx, setxxxx] = useState('')
+
     useEffect(() => {
+        isLogin().then(res => {
+            console.log(res.data)
+            if (res.data.code == 0) {
+                setxinan(true)
+                setxxxx(res.data.username)
+            } else if (res.data.code === 1) {
+                setxinan(false)
+            }
+        })
         console.log()
-        //获取本地用户名
-        let use = localStorage.getItem("user")
-        setUser(use)
-    }, [users])
+    }, [xinan, xxxx])
+ 
     console.log(props)
     return (
         <header id="header">
@@ -54,15 +65,41 @@ function Header(props) {
                 <span onClick={() => {
                     console.log('店家了')
                     // console.log(flag);
+
                     setFlag(!flag)
+
 
 
                 }}>导航</span>
             </nav>
             <h1 className="logo">miaov.com</h1>
             <span className="user" >
-                {isUser ? <GuestGreeting users={users} /> :
-                    <UserGreeting></UserGreeting>}
+                {xinan ? (
+                    <span className="header-btn-right">
+                        <span
+                            className="header-user"
+                            onClick={() => {
+                                setSetp(!setp)
+                                console.log('用户点击')
+                            }}
+                        >{xxxx}
+                        </span>
+                        <span
+                            className="header-logout-btn"
+                            style={{
+
+                                display: setp ? "block" : "none",
+                            }}
+                            onClick={() => {
+                                logout().then(res => {
+                                    console.log('退出', res)
+                                    setxinan(false)
+                                    localStorage.removeItem('user')
+                                })
+                            }}
+                        >退出</span>
+                    </span>
+                ) : <Link to="/login" ></Link>}
             </span>
         </header>
     );
