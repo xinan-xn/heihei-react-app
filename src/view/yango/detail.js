@@ -6,15 +6,15 @@ import Container from '../yango/container'
 import Foot from '../yango/detail-foot'
 import CallFoot from './callfoot'
 
-import { lecturer, getcomment, getGood, isLogin } from '../../server/api'
+import { lecturer, getcomment, getGood } from '../../server/api'
 function Detail(props) {
     let [data, setData] = useState([]);
     let [sompeople, setsome] = useState([]);
     let { match } = props
     // console.log('传过来的',match.params.id)
     let [footData, FooData] = useState([]);
-    let [artid, setArtid] = useState(match.params.id);
-    let [isLikes, setLikes] = useState(false);
+    let [artid] = useState(match.params.id);
+    let [isLikes] = useState(false);
     //判断是否打开页面点赞
     let [like, setlike] = useState(false);
 

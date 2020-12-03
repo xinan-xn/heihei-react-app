@@ -1,24 +1,18 @@
-// 轮播图组件
+
 import React,{useState,useEffect} from 'react'
 import { Carousel } from 'antd';
-// import imgUrl1 from '../../images/teacher_photo.png'
-// import imgUrl2 from '../../images/teacher_photo.png'
-// import imgUrl3 from '../../images/teacher_photo.png'
+
 
  import {getList} from '../../server/api'
 import Aside from '../zhl/aside'
-// const arr = [
-//     {  'url': imgUrl1 , name:"莫涛"},
-//     {  'url': imgUrl2 , name:"莫涛"},
-//     {  'url': imgUrl3 , name:"莫涛"},
-// ]
+
 function Banner(props) {
     let [arr,setArr] = useState([])
     let [id,setId] = useState('')
     
     let [log,setLog] = useState(false)
     useEffect( () => {
-        const data =  getList({order:'desc',sort:"sort",category_id:2,recommend:0}).then(res=>{
+        getList({order:'desc',sort:"sort",category_id:2,recommend:0}).then(res=>{
 
             setArr(res.data)
         })

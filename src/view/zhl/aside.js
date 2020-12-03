@@ -1,6 +1,5 @@
 import React,{useEffect,useState} from 'react'
 
-import BScroll from "better-scroll";
 import {getList} from '../../server/api'
 import './page.css'
 
@@ -21,7 +20,7 @@ function Aside(props){
         >
             {
                 data.map(item=>{
-                                if(item.id == id){
+                                if(item.id === id){
                                     return (
                       <div className="elastic_box">
                 <span className="close" 

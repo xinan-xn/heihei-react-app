@@ -2,45 +2,9 @@ import React, { useState, useEffect } from 'react'
 import '../../css/one.css'
 import { Link } from 'react-router-dom'
 import { logout, isLogin } from '../../server/api'
-function UserGreeting(props) {
-    return <Link to="/login" ></Link>;
-}
-
-function GuestGreeting(props) {
-
-    console.log(props)
-    let [flag, setFlag] = useState(false)
-    return (
-        <span className="header-btn-right">
-            <span
-                className="header-user"
-                onClick={() => {
-                    setFlag(!flag)
-                    console.log('用户点击')
-                }}
-            >{props.users}
-            </span>
-            <span
-                className="header-logout-btn"
-                style={{
-
-                    display: flag ? "block" : "none",
-                }}
-                onClick={() => {
-                    logout().then(res => {
-                        console.log('退出', res)
-                        localStorage.removeItem('user')
-                    })
-                }}
-            >
-                退出
-          </span>
-        </span>
-    );
-}
 
 function Header(props) {
-    let { setFlag, flag, users, setUser, isUser } = props
+    let { setFlag, flag} = props
     let [xinan, setxinan] = useState(true)
     let [setp, setSetp] = useState(false)
     let [xxxx, setxxxx] = useState('')
@@ -48,7 +12,7 @@ function Header(props) {
     useEffect(() => {
         isLogin().then(res => {
             // console.log(res.data)
-            if (res.data.code == 0) {
+            if (res.data.code === 0) {
                 setxinan(true)
                 setxxxx(res.data.username)
             } else if (res.data.code === 1) {

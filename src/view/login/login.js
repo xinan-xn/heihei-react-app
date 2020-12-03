@@ -1,5 +1,5 @@
 import React, {useState } from "react";
-import { useLocation, useHistory } from "react-router-dom";
+import {useHistory } from "react-router-dom";
 import "./login.css";
 import "./normalize.css";
 import user_img from '../../images/user_img.png'

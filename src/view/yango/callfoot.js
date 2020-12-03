@@ -34,7 +34,6 @@ function CallFoot(props) {
                     value={textValue}
                     onChange={({ target }) => {
                         setTextValue(target.value)
-                        console.log(target.value)
                     }}
                 />
                 <footer className="f-footer"

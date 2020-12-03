@@ -5,7 +5,7 @@ import { good, getGood, cancelGood } from '../../server/api'
 function Foot(props) {
 
     let { setlike, like } = props
-    let [msg, setmsg] = useState("")
+    let [msg] = useState("")
     useEffect(() => {
         console.log()
     }, [msg])
@@ -29,7 +29,7 @@ function Foot(props) {
                     if (isGood.data.code === 0) {
                         setlike(!like)
                         //取消点赞
-                        let delGood = await cancelGood({
+                        await cancelGood({
                             goodid: isGood.data.gooid,
                             article_id: artid
                         })
@@ -44,7 +44,7 @@ function Foot(props) {
                     } else if (isGood.data.code === 3) {
                         setlike(!like)
                         //点赞
-                        let toGood = await good({
+                     good({
                             article_id: artid
                         })
                         sum++
