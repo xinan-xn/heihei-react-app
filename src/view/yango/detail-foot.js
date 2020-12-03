@@ -11,7 +11,7 @@ function Foot(props) {
     }, [msg])
     // console.log(props.footData, props);
     let { footData, artid, sompeople, setsome } = props;
-let sum=sompeople
+    let sum = sompeople
     return (
         <div className="comment">
             <p className="give_praise">
@@ -20,14 +20,14 @@ let sum=sompeople
                 </span>
                 <span className="praise_span" onClick={async () => {
 
-                    setlike(!like)
                     //是否点赞
                     let isGood = await getGood({
                         article_id: artid
                     })
-                    // console.log("是否点赞", isGood.data)
+                    console.log("是否点赞", isGood.data)
                     //如果返回0则说明点过赞,取消
                     if (isGood.data.code === 0) {
+                        setlike(!like)
                         //取消点赞
                         let delGood = await cancelGood({
                             goodid: isGood.data.gooid,
@@ -35,11 +35,14 @@ let sum=sompeople
                         })
                         sum--
                         setsome(sum)
+
                         // console.log("取消点赞", delGood)
 
                     } else if (isGood.data.code === 1) {//未登录
+
                         console.log(isGood.data.msg)
                     } else if (isGood.data.code === 3) {
+                        setlike(!like)
                         //点赞
                         let toGood = await good({
                             article_id: artid
