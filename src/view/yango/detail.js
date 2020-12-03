@@ -14,7 +14,6 @@ function Detail(props) {
     // console.log('传过来的',match.params.id)
     let [footData, FooData] = useState([]);
     let [artid, setArtid] = useState(match.params.id);
-    let [isLogi, setLogi] = useState(false);
     let [isLikes, setLikes] = useState(false);
     //判断是否打开页面点赞
     let [like, setlike] = useState(false);
@@ -46,14 +45,11 @@ function Detail(props) {
         let commentData = await getcomment({
             article_id: match.params.id,
         })
+        console.log(commentData)
         FooData(
             commentData.data,
         )
-        //是否登录
-        let flag = await isLogin()
-        if (flag.data.code === 0) {
-            setLogi(true)
-        }
+
     }, [])
 
     return (
@@ -75,7 +71,11 @@ function Detail(props) {
                     like={like}
                 ></Foot>
                 {/*回复本贴*/}
-                <CallFoot isLogi={isLogi} isLikes={isLikes}></CallFoot>
+                <CallFoot
+                    isLikes={isLikes}
+                    artid={artid}
+                    FooData={FooData}
+                ></CallFoot>
             </div>
 
         </Fragment>
