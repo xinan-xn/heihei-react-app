@@ -31,8 +31,8 @@ function Banner() {
             <Carousel autoplay>{
                 arr.map((item, index) => {
                     return (
-                        <div>
-                            <h3 style={contentStyle} key={item.id}>
+                        <div key={item.id}>
+                            <h3 style={contentStyle} >
                                 <img style={imgstyle} src={item.url}></img>
                             </h3>
                         </div>
